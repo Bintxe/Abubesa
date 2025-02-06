@@ -71,10 +71,14 @@ a
     height: 92vh;
     /*padding: 15px 40px;*/
     background-color: var(--web-red);
+    
 }
 
 .margin-box{
-    padding: 15px 12.5vw;
+    margin: 0 auto;
+    padding: 15px 1.5vw;
+    max-width: 1980px;
+    /*width: 100vw;*/
 }
 
 .test-box{
@@ -86,7 +90,13 @@ a
     border-color: RGBA(255,255,255,1);
     border-radius: 25px;
     padding: 30vh 50px 20px 50px;
-    margin: 15px;
+    /*margin: 15px;*/
+    /*width: 100%;*/
+
+    margin: 3vh 0;
+    
+    
+    
 }
 
 .test-box img{
