@@ -44,7 +44,7 @@ a
 }
 
 .menu-span{
-    width: 7vw;
+    width: 12vw;
 }
 
 .menu{
@@ -59,7 +59,7 @@ a
     margin: 0 0.75vw;
     /*text-align: center; */
     vertical-align: bottom; 
-    font-size: 2.1rem; 
+    font-size: 1.75em; 
     align-content: center;
     font-weight: 700;
     text-transform: uppercase;
@@ -68,7 +68,7 @@ a
 
 .main-box{
     width: 100vw;
-    height: 92vh;
+    /*height: 100%;*/
     /*padding: 15px 40px;*/
     background-color: var(--web-red);
     
@@ -89,7 +89,8 @@ a
     border-style: solid;
     border-color: RGBA(255,255,255,1);
     border-radius: 25px;
-    padding: 30vh 50px 20px 50px;
+    padding: 20px 50px 30vh 50px;
+    top: -100px;
     /*margin: 15px;*/
     /*width: 100%;*/
 
