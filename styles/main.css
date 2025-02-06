@@ -1,14 +1,27 @@
-:root{
-    --main-bg-color: #eee;
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
+:root{
     --web-red: rgb(197, 49, 63);
     --web-yw: rgb(251, 169, 15);
     --web-blue: rgb(106, 133, 205);
+
+    --main-bg-color: white;
+    --main-fg-color: black;
 }
 
 body{
     margin: 0 auto;
     background-color: var(--main-bg-color);
+}
+
+a
+{
+    color: var(--main-fg-color);
+    text-decoration: none;
+}
+
+.hidden{
+    display: none;
 }
 
 .topbar{
@@ -17,11 +30,35 @@ body{
     margin: 0 auto;
     width: 100%;
     height: 8vh;
-
+    display: flex;
     background-color: var(--web-yw);
+
+    font-family: 'Unbounded';
 }
 
 .logo{
     margin: 0.5vh 40px;
     height: 7vh;
+}
+
+.menu-span{
+    width: 7vw;
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.menu-item{
+    /*position: relative;*/
+    margin: 0 0.75vw;
+    /*text-align: center; */
+    vertical-align: bottom; 
+    font-size: 2.1rem; 
+    align-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
 }
