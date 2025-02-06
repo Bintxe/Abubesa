@@ -83,7 +83,7 @@ a
 }
 
 .test-box{
-    background-image: url("/img/Hong_Webcomic_Portada_2.png");
+    background-image: url(../img/Hong_Webcomic_Portada_2.png);
     background-position: 50% 50%,45% 37%;
     background-size: cover, cover;
     border-width: 0px 0px 0px 0px;
