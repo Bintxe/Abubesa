@@ -90,18 +90,22 @@ a
     border-style: solid;
     border-color: RGBA(255,255,255,1);
     border-radius: 25px;
-    padding: 16vh 1vw 2vh 55vw;
+    /*padding: 16vh 1vw 2vh 55vw;*/
+    padding: 2px 1vw 0 55vw;
     /*top: -100px;*/
     /*margin: 15px;*/
     /*width: 100%;*/
     text-align: right;
     margin: 3vh 0;
     
-    
-    
+    height: 50vh;
+    min-height: 400px;
+    align-content: end;
 }
 
 .test-box img{
+    align-self: baseline;
+    vertical-align: bottom;
     text-align: right;
     max-width: 80%;
     right:0px;
