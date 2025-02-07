@@ -177,7 +177,7 @@ footer{
 .gallery img{
     width: 100% !important;    
     height: auto !important;  
-    margin-bottom: 1vh;
+    margin-bottom: 1vw;
     border-radius: 10px;
     align-self: start;
 }
