@@ -30,7 +30,7 @@ a
     display: none;
 }
 
-.navbar{
+#navbar{
     /*position: absolute;*/
     /*top: 0;*/
     margin: 0 auto;
@@ -43,9 +43,11 @@ a
     position: fixed;
     z-index: 1;
     font-family: 'Unbounded';
+
+    transition: 0.5s ease;
 }
 
-.navbar a:hover{
+#navbar a:hover{
     color: var(--web-red);
     transition: 0.2s;
 }

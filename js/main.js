@@ -1,29 +1,15 @@
-function filterGallery(button, type)
-{
-    var gallery = document.getElementById("gallery");
-    var images = gallery.getElementsByTagName("img");
+//Global variables
+var prevScrollpos = window.scrollY;
 
-    for (var i = 0; i < images.length; i++) 
+//Functions
+function updateNavbarOnScroll () {
+    var currentScrollPos = window.scrollY;
+    if (prevScrollpos > currentScrollPos) 
     {
-        if(type == null)
-        {
-            images[i].classList.remove("hidden");
-        }
-        else if( images[i].classList.contains(type))
-        {
-            images[i].classList.remove("hidden");
-        }else
-        {
-            images[i].classList.add("hidden");
-        }
-    }
-
-    var filterButtons = document.getElementById("gallery-filters");
-    var selectedButtons = filterButtons.getElementsByClassName("selected");
-    for (var i = 0; i < selectedButtons.length; i++) 
+        document.getElementById("navbar").style.top = "0";
+    } else if(currentScrollPos > 300)
     {
-        selectedButtons[i].classList.remove("selected");
+        document.getElementById("navbar").style.top = "-8vh";
     }
-
-    button.classList.add("selected");
+    prevScrollpos = currentScrollPos;
 }
