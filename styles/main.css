@@ -4,8 +4,9 @@
     --web-red: rgb(197, 49, 63);
     --web-yw: rgb(251, 169, 15);
     --web-blue: rgb(106, 133, 205);
+    --web-beige: rgb(244, 240, 231);
 
-    --main-bg-color: white;
+    --main-bg-color: var(--web-beige);
     --main-fg-color: black;
 }
 
@@ -37,8 +38,10 @@ a
     height: 8vh;
     min-height: 80px;
     display: flex;
-    background-color: var(--web-yw);
+    background-color: var(--web-beige);
 
+    position: fixed;
+    z-index: 1;
     font-family: 'Unbounded';
 }
 
@@ -77,6 +80,7 @@ a
 }
 
 .main-box{
+    padding-top: 8vh;
     /*width: 100vw;*/
     /*height: 100%;*/
     /*padding: 15px 40px;*/
@@ -124,4 +128,33 @@ a
     font-size: 4rem;
     color: var(--web-red);
     text-shadow: -2px -2px 0 #000,2px -2px 0 #000, -2px 2px 0 #000, 5px 5px 0 #000;
+}
+
+footer{
+    justify-content: space-evenly;
+    display: flex;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.social-logo
+{
+    background-color: var(--web-yw);
+    align-content: center;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+.social-logo:hover
+{
+    background-color: var(--web-red);
+    transition: 0.2s;
+}
+
+.social-logo svg{
+    width: 40px;
+    fill: var(--main-fg-color);
+    vertical-align: bottom;
 }
