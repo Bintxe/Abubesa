@@ -11,8 +11,8 @@
 
 body{
     margin: 0 auto;
-    height: 100vh;
-    width: 100vw;
+    /*height: 100vh;
+    width: 100vw;*/
     background-color: var(--main-bg-color);
 }
 
@@ -20,7 +20,10 @@ a
 {
     color: var(--main-fg-color);
     text-decoration: none;
+    transition: 0.2s;
 }
+
+
 
 .hidden{
     display: none;
@@ -28,7 +31,7 @@ a
 
 .navbar{
     /*position: absolute;*/
-    top: 0;
+    /*top: 0;*/
     margin: 0 auto;
     width: 100%;
     height: 8vh;
@@ -39,10 +42,15 @@ a
     font-family: 'Unbounded';
 }
 
+.navbar a:hover{
+    color: var(--web-red);
+    transition: 0.2s;
+}
+
 .logo{
     margin: 0.5vh 40px;
     height: 90%;
-    align-self: center;
+    /*align-self: center;*/
 }
 
 .menu-span{
@@ -60,7 +68,7 @@ a
     /*position: relative;*/
     margin: 0 0.75vw;
     /*text-align: center; */
-    vertical-align: bottom; 
+    /*vertical-align: bottom; */
     font-size: 1.75em; 
     align-content: center;
     font-weight: 700;
@@ -69,12 +77,10 @@ a
 }
 
 .main-box{
-    width: 100vw;
+    /*width: 100vw;*/
     /*height: 100%;*/
     /*padding: 15px 40px;*/
-    background-color: var(--main-bg-color);
-    overflow-x: none;
-    
+    background-color: var(--main-bg-color);    
 }
 
 .margin-box{
@@ -84,13 +90,10 @@ a
     /*width: 100vw;*/
 }
 
-.test-box{
+.content-box{
     background-image: url(../img/Hong_Webcomic_Portada_2.png);
-    background-position: 50% 50%,45% 37%;
+    background-position: 50% 50%;
     background-size: cover, cover;
-    border-width: 0px 0px 0px 0px;
-    border-style: solid;
-    border-color: RGBA(255,255,255,1);
     border-radius: 25px;
     /*padding: 16vh 1vw 2vh 55vw;*/
     /*padding: 2px 1vw 0 55vw;*/
@@ -106,8 +109,8 @@ a
     align-content: end;
 }
 
-.test-box img{
-    align-self: baseline;
+.content-box img{
+    /*align-self: baseline;*/
     vertical-align: bottom;
     text-align: right;
     max-width: 75%;
@@ -121,12 +124,4 @@ a
     font-size: 4rem;
     color: var(--web-red);
     text-shadow: -2px -2px 0 #000,2px -2px 0 #000, -2px 2px 0 #000, 5px 5px 0 #000;
-}
-
-.inside-b{
-    background-position: 50% 70%,45% 37%;
-}
-
-.inside-text-b{
-    color: var(--web-yw);
 }
