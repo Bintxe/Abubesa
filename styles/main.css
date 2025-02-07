@@ -219,7 +219,7 @@ footer{
 }
 
 .gallery-filters button:hover{
-    background-color:  var(--web-blue);
+    background-color:  var(--web-yw);
     transition: 0.2s;
     cursor:pointer;
 }
