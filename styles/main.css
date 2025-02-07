@@ -225,9 +225,9 @@ footer{
 }
 
 .go-up-button{
-    background-image: url(../img/flecha.png);
+    background-image: url(../img/flecha2.png);
     background-size: cover;
-    opacity: 0.4;
+    opacity: 0.5;
     position: fixed;
     width: 75px;
     height: 75px;
@@ -237,6 +237,7 @@ footer{
 }
 
 .go-up-button:hover{
+    background-image: url(../img/flecha.png);
     opacity: 1;
     transition: 0.2s;
 }
