@@ -158,3 +158,30 @@ footer{
     fill: var(--main-fg-color);
     vertical-align: bottom;
 }
+
+.gallery{
+    line-height: 0;       
+    -webkit-column-count: 3;    
+    -webkit-column-gap: 0px;    
+    -moz-column-count: 3;
+    -moz-column-gap: 0px;
+    column-count: 3;    
+    column-gap: 1vw; 
+
+    display:inline-block;    
+    margin-right: auto;    
+    margin-left: auto;  
+
+}
+
+.gallery img{
+    width: 100% !important;    
+    height: auto !important;  
+    margin-bottom: 1vh;
+    border-radius: 10px;
+    align-self: start;
+}
+
+.gallery img:nth-child(3n+1) { order: 1; } 
+.gallery img:nth-child(3n+2) { order: 2; } 
+.gallery img:nth-child(3n) { order: 3; }
