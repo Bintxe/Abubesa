@@ -223,6 +223,23 @@ footer{
     transition: 0.2s;
     cursor:pointer;
 }
+
+.go-up-button{
+    background-image: url(../img/flecha.png);
+    background-size: cover;
+    opacity: 0.4;
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    right: 4vh;
+    bottom: 4vh;
+    transition: 0.2s;
+}
+
+.go-up-button:hover{
+    opacity: 1;
+    transition: 0.2s;
+}
 /*
 .gallery img:nth-child(3n+1) { order: 1; } 
 .gallery img:nth-child(3n+2) { order: 2; } 
