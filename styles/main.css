@@ -72,11 +72,11 @@ a
     margin: 0 0.75vw;
     /*text-align: center; */
     /*vertical-align: bottom; */
-    font-size: 1.75em; 
+    font-size: 1.4em; 
     align-content: center;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: 'Unbounded';
+    font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .main-box{
