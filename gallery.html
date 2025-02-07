@@ -38,71 +38,71 @@
     <!-- Begin of main section-->
     <div class="main-box">
         <div class="margin-box">
-            <div class="gallery-filters">
-                    <button><p>SFW</p></button>
-                    <button><p>NSFW</p></button>
-                    <button><p>All</p></button>
+            <div id="gallery-filters">
+                <button class="selected" onclick="filterGallery(this, 'sfw');"><p>SFW</p></button>
+                <button onclick="filterGallery(this, 'nsfw');"><p>NSFW</p></button>
+                <button onclick="filterGallery(this);"><p>All</p></button>
             </div>
 
-            <div class="gallery">
-                <img alt="Aphrodite" class="nsfw" src="./img/Artworks/NSFW/Aphrodite_1.png" />
-                <img alt="Enjoy your meal - Megaera & Zagreus" class="nsfw" src="./img/Artworks/NSFW/Enjoy_your_meal_Megaera_n_Zagreus.png" />
-                <img alt="Filling the void Ka'isa" class="nsfw" src="./img/Artworks/NSFW/Filling_the_void_Kaisa.png" />
-                <img alt="Frieren, Fern & Stark" class="nsfw" src="./img/Artworks/NSFW/Frieren_Fern_n_Stark.png" />
-                <img alt="Fuck the police Caitlyn & Vi" class="sfw" src="./img/Artworks/SFW/Fuck_the_police_Caitlyn_n_Vi_1.png" />
-                <img alt="Fuck the police Caitlyn & Vi 2" class="nsfw" src="./img/Artworks/NSFW/Fuck_the_police_Caitlyn_n_Vi_2.png" />
-                <img alt="Hot_cupcakes_Caitlyn_n_Vi" class="nsfw" src="./img/Artworks/NSFW/Hot_cupcakes_Caitlyn_n_Vi.png" />
-                <img alt="Ive_only_ever_imagined_the_gardens_Caitlyn_n_Vi" class="nsfw" src="./img/Artworks/NSFW/Ive_only_ever_imagined_the_gardens_Caitlyn_n_Vi.png" />
-                <img alt="Jinx_n_Evelynn_1" class="nsfw" src="./img/Artworks/NSFW/Jinx_n_Evelynn_1.png" />
-                <img alt="Jinx_n_Evelynn_2" class="nsfw" src="./img/Artworks/NSFW/Jinx_n_Evelynn_2.png" />
-                <img alt="Megaera" class="nsfw" src="./img/Artworks/NSFW/Megaera.png" />
-                <img alt="Oil_n_water_Caitlyn_n_Vi" class="nsfw" src="./img/Artworks/NSFW/Oil_n_water_Caitlyn_n_Vi.png" />
-                <img alt="Seo_pin_up" class="nsfw" src="./img/Artworks/NSFW/Seo_pin_up.png" />
-                <img alt="Timebomb_ Jinx_n_Ekko_1" class="nsfw" src="./img/Artworks/NSFW/Timebomb_ Jinx_n_Ekko_1.png" />
-                <img alt="Timebomb_ Jinx_n_Ekko_2" class="nsfw" src="./img/Artworks/NSFW/Timebomb_ Jinx_n_Ekko_2.png" />
-                <img alt="Timebomb_ Jinx_n_Ekko_3" class="nsfw" src="./img/Artworks/NSFW/Timebomb_ Jinx_n_Ekko_3.png" />
-                <img alt="Timebomb_ Jinx_n_Ekko_4" class="nsfw" src="./img/Artworks/NSFW/Timebomb_ Jinx_n_Ekko_4.png" />
-                <img alt="Yelan_n_Ningguang" class="nsfw" src="./img/Artworks/NSFW/Yelan_n_Ningguang.png" />
+            <div id="gallery">
+                <img alt="Aphrodite" class="nsfw hidden" src="./img/Artworks/NSFW/Aphrodite_1.png" />
+                <img alt="Enjoy your meal - Megaera & Zagreus" class="nsfw hidden" src="./img/Artworks/NSFW/Enjoy_your_meal_Megaera_n_Zagreus.png" />
+                <img alt="Filling the void Ka'isa" class="nsfw hidden" src="./img/Artworks/NSFW/Filling_the_void_Kaisa.png" />
+                <img alt="Frieren, Fern & Stark" class="nsfw hidden" src="./img/Artworks/NSFW/Frieren_Fern_n_Stark.png" />
+                <img alt="Fuck the police - Caitlyn & Vi" class="sfw" src="./img/Artworks/SFW/Fuck_the_police_Caitlyn_n_Vi_1.png" />
+                <img alt="Fuck the police - Caitlyn & Vi 2" class="nsfw hidden" src="./img/Artworks/NSFW/Fuck_the_police_Caitlyn_n_Vi_2.png" />
+                <img alt="Hot cupcakes - Caitlyn & Vi" class="nsfw hidden" src="./img/Artworks/NSFW/Hot_cupcakes_Caitlyn_n_Vi.png" />
+                <img alt="I've only ever imagined the gardens - Caitlyn & Vi" class="nsfw hidden" src="./img/Artworks/NSFW/Ive_only_ever_imagined_the_gardens_Caitlyn_n_Vi.png" />
+                <img alt="Jinx & Evelynn 1" class="nsfw hidden" src="./img/Artworks/NSFW/Jinx_n_Evelynn_1.png" />
+                <img alt="Jinx & Evelynn 2" class="nsfw hidden" src="./img/Artworks/NSFW/Jinx_n_Evelynn_2.png" />
+                <img alt="Megaera" class="nsfw hidden" src="./img/Artworks/NSFW/Megaera.png" />
+                <img alt="Oil & water - Caitlyn & Vi" class="nsfw hidden" src="./img/Artworks/NSFW/Oil_n_water_Caitlyn_n_Vi.png" />
+                <img alt="Seo pin up" class="nsfw hidden" src="./img/Artworks/NSFW/Seo_pin_up.png" />
+                <img alt="Timebomb - Jinx & Ekko 1" class="nsfw hidden" src="./img/Artworks/NSFW/Timebomb_ Jinx_n_Ekko_1.png" />
+                <img alt="Timebomb - Jinx & Ekko 2" class="nsfw hidden" src="./img/Artworks/NSFW/Timebomb_ Jinx_n_Ekko_2.png" />
+                <img alt="Timebomb - Jinx & Ekko 3" class="nsfw hidden" src="./img/Artworks/NSFW/Timebomb_ Jinx_n_Ekko_3.png" />
+                <img alt="Timebomb - Jinx & Ekko 4" class="nsfw hidden" src="./img/Artworks/NSFW/Timebomb_ Jinx_n_Ekko_4.png" />
+                <img alt="Yelan & Ningguang" class="nsfw hidden" src="./img/Artworks/NSFW/Yelan_n_Ningguang.png" />
                 <img alt="Aphrodite" class="sfw" src="./img/Artworks/SFW/Aphrodite_2.png" />
                 <img alt="Baiken" class="sfw" src="./img/Artworks/SFW/Baiken.png" />
                 <img alt="Bayonetta" class="sfw" src="./img/Artworks/SFW/Bayonetta.png" />
                 <img alt="Bocchi" class="sfw" src="./img/Artworks/SFW/Bocchi.png" />
                 <img alt="Bridget" class="sfw" src="./img/Artworks/SFW/Bridget.png" />
-                <img alt="Dance_Dance_Kobeni" class="sfw" src="./img/Artworks/SFW/Dance_Dance_Kobeni.png" />
-                <img alt="Deabru_2021" class="sfw" src="./img/Artworks/SFW/Deabru_2021.png" />
-                <img alt="Dehya_n_Candace" class="sfw" src="./img/Artworks/SFW/Dehya_n_Candace.png" />
+                <img alt="Dance Dance Kobeni" class="sfw" src="./img/Artworks/SFW/Dance_Dance_Kobeni.png" />
+                <img alt="Deabru 2021" class="sfw" src="./img/Artworks/SFW/Deabru_2021.png" />
+                <img alt="Dehya & Candace" class="sfw" src="./img/Artworks/SFW/Dehya_n_Candace.png" />
                 <img alt="Denji" class="sfw" src="./img/Artworks/SFW/Denji.png" />
                 <img alt="Ducktales" class="sfw" src="./img/Artworks/SFW/Ducktales.png" />
-                <img alt="EDEN_denak" class="sfw" src="./img/Artworks/SFW/EDEN_denak.png" />
-                <img alt="Eris_n_Melinoe_at_the_beach" class="sfw" src="./img/Artworks/SFW/Eris_n_Melinoe_at_the_beach.png" />
-                <img alt="Eris_n_Melinoe_Soyjack" class="sfw" src="./img/Artworks/SFW/Eris_n_Melinoe_Soyjack.png" />
-                <img alt="Evangelion_333" class="sfw" src="./img/Artworks/SFW/Evangelion_333.png" />
-                <img alt="Evelynn_pin_up" class="sfw" src="./img/Artworks/SFW/Evelynn_pin_up.png" />
-                <img alt="Evelynn_pin_up_remake" class="sfw" src="./img/Artworks/SFW/Evelynn_pin_up_remake.png" />
-                <img alt="Evelynn_spit_remake_1" class="sfw" src="./img/Artworks/SFW/Evelynn_spit_remake_1.png" />
-                <img alt="Evelynn_spit_remake_2" class="sfw" src="./img/Artworks/SFW/Evelynn_spit_remake_2.png" />
-                <img alt="Ganyu_n_Senhe" class="sfw" src="./img/Artworks/SFW/Ganyu_n_Senhe.png" />
-                <img alt="Guts_n_Sailor" class="sfw" src="./img/Artworks/SFW/Guts_n_Sailor.png" />
+                <img alt="EDEN denak" class="sfw" src="./img/Artworks/SFW/EDEN_denak.png" />
+                <img alt="Eris & Melinoe at the beach" class="sfw" src="./img/Artworks/SFW/Eris_n_Melinoe_at_the_beach.png" />
+                <img alt="Eris & Melinoe Soyjack" class="sfw" src="./img/Artworks/SFW/Eris_n_Melinoe_Soyjack.png" />
+                <img alt="Evangelion 3.33" class="sfw" src="./img/Artworks/SFW/Evangelion_333.png" />
+                <img alt="Evelynn pin up" class="sfw" src="./img/Artworks/SFW/Evelynn_pin_up.png" />
+                <img alt="Evelynn pin up remake" class="sfw" src="./img/Artworks/SFW/Evelynn_pin_up_remake.png" />
+                <img alt="Evelynn spit remake 1" class="sfw" src="./img/Artworks/SFW/Evelynn_spit_remake_1.png" />
+                <img alt="Evelynn spit remake 2" class="sfw" src="./img/Artworks/SFW/Evelynn_spit_remake_2.png" />
+                <img alt="Ganyu & Senhe" class="sfw" src="./img/Artworks/SFW/Ganyu_n_Senhe.png" />
+                <img alt="Guts & Sailor" class="sfw" src="./img/Artworks/SFW/Guts_n_Sailor.png" />
                 <img alt="Himeno" class="sfw" src="./img/Artworks/SFW/Himeno.png" />
-                <img alt="Jackpot_Falin_n_Marcille" class="sfw" src="./img/Artworks/SFW/Jackpot_Falin_n_Marcille.png" />
-                <img alt="Jinx_loca" class="sfw" src="./img/Artworks/SFW/Jinx_loca.png" />
-                <img alt="Jinx_n_Vi" class="sfw" src="./img/Artworks/SFW/Jinx_n_Vi.png" />
-                <img alt="Kikuri_meltdown" class="sfw" src="./img/Artworks/SFW/Kikuri_meltdown.png" />
-                <img alt="Lady_Dimitrescu" class="sfw" src="./img/Artworks/SFW/Lady_Dimitrescu.png" />
-                <img alt="Lumine_n_Wanderer_1" class="sfw" src="./img/Artworks/SFW/Lumine_n_Wanderer_1.png" />
-                <img alt="Lumine_n_Wanderer_2" class="nsfw" src="./img/Artworks/NSFW/Lumine_n_Wanderer_2.png" />
-                <img alt="Makima_n_Denji" class="sfw" src="./img/Artworks/SFW/Makima_n_Denji.png" />
+                <img alt="Jackpot - Falin & Marcille" class="sfw" src="./img/Artworks/SFW/Jackpot_Falin_n_Marcille.png" />
+                <img alt="Jinx loca" class="sfw" src="./img/Artworks/SFW/Jinx_loca.png" />
+                <img alt="Jinx & Vi" class="sfw" src="./img/Artworks/SFW/Jinx_n_Vi.png" />
+                <img alt="Kikuri meltdown" class="sfw" src="./img/Artworks/SFW/Kikuri_meltdown.png" />
+                <img alt="Lady Dimitrescu" class="sfw" src="./img/Artworks/SFW/Lady_Dimitrescu.png" />
+                <img alt="Lumine & Wanderer 1" class="sfw" src="./img/Artworks/SFW/Lumine_n_Wanderer_1.png" />
+                <img alt="Lumine & Wanderer 2" class="nsfw hidden" src="./img/Artworks/NSFW/Lumine_n_Wanderer_2.png" />
+                <img alt="Makima & Denji" class="sfw" src="./img/Artworks/SFW/Makima_n_Denji.png" />
                 <img alt="Malenia" class="sfw" src="./img/Artworks/SFW/Malenia.png" />
-                <img alt="Mara_OC_Pin_up" class="sfw" src="./img/Artworks/SFW/Mara_OC_Pin_up.png" />
+                <img alt="Mara OC Pin up" class="sfw" src="./img/Artworks/SFW/Mara_OC_Pin_up.png" />
                 <img alt="Marcille" class="sfw" src="./img/Artworks/SFW/Marcille.png" />
-                <img alt="Marcille_n_Falin" class="sfw" src="./img/Artworks/SFW/Marcille_n_Falin.png" />
-                <img alt="Marcille_n_Falin_cosplay" class="sfw" src="./img/Artworks/SFW/Marcille_n_Falin_cosplay.png" />
+                <img alt="Marcille & Falin" class="sfw" src="./img/Artworks/SFW/Marcille_n_Falin.png" />
+                <img alt="Marcille & Falin cosplay" class="sfw" src="./img/Artworks/SFW/Marcille_n_Falin_cosplay.png" />
                 <img alt="May" class="sfw" src="./img/Artworks/SFW/May.png" />
-                <img alt="Raiden_n_Shotgun" class="sfw" src="./img/Artworks/SFW/Raiden_n_Shotgun.png" />
-                <img alt="Ramlethal_borgir" class="sfw" src="./img/Artworks/SFW/Ramlethal_borgir.png" />
+                <img alt="Raiden Shotgun" class="sfw" src="./img/Artworks/SFW/Raiden_n_Shotgun.png" />
+                <img alt="Ramlethal borgir" class="sfw" src="./img/Artworks/SFW/Ramlethal_borgir.png" />
                 <img alt="Selene" class="sfw" src="./img/Artworks/SFW/Selene.png" />
-                <img alt="Toxic_relationship_Ekko_n_Jinx" class="sfw" src="./img/Artworks/SFW/Toxic_relationship_Ekko_n_Jinx.png" />
-                <img alt="Who_let_her_cook" class="sfw" src="./img/Artworks/SFW/Who_let_her_cook.png" />
+                <img alt="Toxic relationship - Ekko & Jinx" class="sfw" src="./img/Artworks/SFW/Toxic_relationship_Ekko_n_Jinx.png" />
+                <img alt="Who let her cook" class="sfw" src="./img/Artworks/SFW/Who_let_her_cook.png" />
             </div>
             
         </div>
@@ -133,3 +133,5 @@
         </div>
     </footer>
 </body>
+<script src="js/main.js"></script>
+</html>
