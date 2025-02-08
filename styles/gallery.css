@@ -139,9 +139,30 @@
 
 .overlay-image-box{
     text-align: center;
+    position: relative;
 }
 
 #overlay-image{
     max-height: 100vh;
     max-width: calc(100vw - 200px);
+}
+
+#overlay-image-text{
+    background-color: var(--main-overlay-color-b);
+    width: 100%;
+    height: 15vh;
+    min-height: 200px;
+    position: absolute;
+    bottom: min(-200px, -15vh);
+    opacity: 0;
+
+    transition: 0.3s ease;
+}
+
+#overlay-image-text p{
+    color:var(--main-bg-color);
+    font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3em;
+    font-weight: 150;
+    line-height: 0.75;
 }
