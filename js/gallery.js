@@ -1,8 +1,8 @@
 //Functions
 function filterGallery(button, type)
 {
-    var gallery = document.getElementById("gallery");
-    var images = gallery.getElementsByTagName("img");
+    let gallery = document.getElementById("gallery");
+    let images = gallery.getElementsByTagName("img");
 
     for (var i = 0; i < images.length; i++) 
     {
@@ -19,9 +19,9 @@ function filterGallery(button, type)
         }
     }
 
-    var filterButtons = document.getElementById("gallery-filters");
-    var selectedButtons = filterButtons.getElementsByClassName("selected");
-    for (var i = 0; i < selectedButtons.length; i++) 
+    let filterButtons = document.getElementById("gallery-filters");
+    let selectedButtons = filterButtons.getElementsByClassName("selected");
+    for (let i = 0; i < selectedButtons.length; i++) 
     {
         selectedButtons[i].classList.remove("selected");
     }
@@ -29,8 +29,34 @@ function filterGallery(button, type)
     button.classList.add("selected");
 }
 
+function onGalleryImageClick(image){
+    let imgOverlay = document.getElementById("overlay-image");
+    imgOverlay.src=image;
+
+    console.log("show overlay");
+
+    let overlay = document.getElementById("gallery-overlay");
+    overlay.classList.remove("hidden");
+}
 
 //Execute
 
-
 window.addEventListener('scroll', () => {updateNavbarOnScroll()});
+
+let gallery = document.getElementById("gallery");
+let images = gallery.getElementsByTagName("img");
+
+for (let i = 0; i < images.length; i++) 
+{
+    
+    let img = images[i].src;
+    images[i].addEventListener('click', function(){onGalleryImageClick(img);});
+}
+
+let overlay = document.getElementById("gallery-overlay");
+let overlayBg = document.getElementById("overlay-background");
+
+overlayBg.addEventListener('click', function(){ 
+    console.log("hiding overlay");
+    overlay.classList.add("hidden"); 
+});

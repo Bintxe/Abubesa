@@ -1,0 +1,134 @@
+
+#gallery{
+    line-height: 0;       
+    -webkit-column-count: 5;    
+    -webkit-column-gap: 0px;    
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+    column-count: 5;    
+    column-gap: 1vw; 
+
+    display:inline-block;    
+    margin-right: auto;    
+    margin-left: auto;  
+}
+
+#gallery img{
+    width: 100% !important;    
+    height: auto !important;  
+    margin-bottom: 1vw;
+    border-radius: 10px;
+    align-self: start;
+
+    transition: 0.25s;
+}
+
+/*
+.gallery img:nth-child(3n+1) { order: 1; } 
+.gallery img:nth-child(3n+2) { order: 2; } 
+.gallery img:nth-child(3n) { order: 3; }
+*/
+
+#gallery img:hover{
+    scale: 1.025;
+    transition: 0.25s;
+
+    cursor: pointer;
+}
+
+#gallery-filters{
+    margin: 1vh auto 2vh auto;
+    justify-content: space-evenly;
+    max-width: 720px;
+    display: flex;
+}
+
+#gallery-filters button{
+    align-self: flex-start;
+    border-radius: 50px;
+    display: inline-flex;
+    min-width: 150px;
+    min-height: 40px;
+    border: 3px solid var(--main-fg-color);
+    background-color: var(--main-bg-color);
+    margin: 0 10px;
+    transition: 0.2s;
+}
+
+#gallery-filters button p{
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    color: var(--main-fg-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;;
+}
+
+#gallery-filters button:hover{
+    background-color:  var(--web-yw);
+    transition: 0.2s;
+    cursor:pointer;
+}
+
+#gallery-filters .selected{
+    background-color:  var(--web-yw);
+}
+
+.go-up-button{
+    background-image: url(../img/flecha2.png);
+    background-size: cover;
+    opacity: 0.5;
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    right: 4vh;
+    bottom: 4vh;
+    transition: 0.2s;
+}
+
+.go-up-button:hover{
+    background-image: url(../img/flecha.png);
+    opacity: 1;
+    transition: 0.2s;
+}
+
+
+#gallery-overlay{
+    /*background-color: var(--main-overlay-color);*/
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+#overlay-background{
+    background-color: var(--main-overlay-color);
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-arrow-button{
+    background-color: var(--web-yw);
+    width: 100px;
+    height: 100px;
+
+}
+
+.overlay-image-box{
+    text-align: center;
+}
+
+#overlay-image{
+    max-height: 100vh;
+    max-width: calc(100vw - 200px);
+}
