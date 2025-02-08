@@ -145,6 +145,7 @@
 #overlay-image{
     max-height: 100vh;
     max-width: calc(100vw - 200px);
+    user-select: none;
 }
 
 #overlay-image-text{
