@@ -33,7 +33,7 @@ function onGalleryImageClick(image){
     let imgOverlay = document.getElementById("overlay-image");
     imgOverlay.src=image;
 
-    console.log("show overlay");
+    document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
     let overlay = document.getElementById("gallery-overlay");
     overlay.classList.remove("hidden");
@@ -57,6 +57,6 @@ let overlay = document.getElementById("gallery-overlay");
 let overlayBg = document.getElementById("overlay-background");
 
 overlayBg.addEventListener('click', function(){ 
-    console.log("hiding overlay");
+    document.getElementsByTagName("html")[0].style.overflow = "auto";
     overlay.classList.add("hidden"); 
 });

@@ -91,6 +91,8 @@
     background-image: url(../img/flecha.png);
     opacity: 1;
     transition: 0.2s;
+
+    cursor: pointer;
 }
 
 
@@ -118,10 +120,21 @@
 }
 
 .gallery-arrow-button{
-    background-color: var(--web-yw);
+    background-image: url(../img/flecha.png);
+    background-size: cover;
+    opacity: 0.3;
     width: 100px;
     height: 100px;
 
+    transition: 0.2s;
+
+}
+
+.gallery-arrow-button:hover{
+    opacity: 1;
+    transition: 0.2s;
+
+    cursor: pointer;
 }
 
 .overlay-image-box{
