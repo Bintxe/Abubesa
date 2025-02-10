@@ -125,7 +125,7 @@ function navigateImages(dir){
 }
 
 function checkArrowKeys(event){
-    console.log("check key")
+    //console.log("check key")
     switch (event.key) {
         case 'ArrowLeft':
             navigateImages(-1);
@@ -155,7 +155,7 @@ function sortImages(){
 
     let galleryBounds = gallery.getBoundingClientRect();
 
-    console.log(gallery.clientWidth+"/5 - "+window.innerWidth+"*0.01 = "+columnWidth);
+    //console.log(gallery.clientWidth+"/5 - "+window.innerWidth+"*0.01 = "+columnWidth);
 
 
     for (let i = 0; i < 5; i++) 
@@ -183,7 +183,7 @@ function sortImages(){
 
         columns[index] += imageList[i].getBoundingClientRect().height + window.innerWidth * 0.01;
         
-        console.log(imageList[i].src+": "+imageList[i].getBoundingClientRect().height + " + "+window.innerWidth * 0.01);
+        //console.log(imageList[i].src+": "+imageList[i].getBoundingClientRect().height + " + "+window.innerWidth * 0.01);
     }
 
     gallery.style.height = Math.max.apply(null, columns)+"px";
@@ -233,6 +233,7 @@ window.onload = (event) =>
 
 
     window.addEventListener('resize', function(event) {
+        //this.setTimeout(sortImages, 0.5);
         sortImages();
     }, true);
 

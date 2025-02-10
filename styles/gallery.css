@@ -34,8 +34,9 @@
     border-radius: 10px;
 
     position: absolute;
-    width: calc(20vw - 1.4vw);
-    height: auto;
+    /*width: calc(20vw - 1.25vw);
+    height: auto;*/
+    opacity: 1;
 
     transition: 0.75s;
 }
@@ -47,7 +48,7 @@
 
     display: block !important;
     pointer-events: none;
-    z-index: -1;
+    z-index: 0;
     
     opacity: 0;
 
