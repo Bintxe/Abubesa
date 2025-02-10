@@ -222,6 +222,13 @@ window.onload = (event) =>
     overlayImg.addEventListener('mouseout', function(){
         showImageTextOverlay(false);
     });
+
+    window.addEventListener('resize', function(event) {
+        //this.setTimeout(sortImages, 0.5);
+        sortImages();
+        this.setTimeout(sortImages, 750);
+    }, true);
+
     /*
     originalImgList = gallery.cloneNode(true);
 
@@ -230,13 +237,10 @@ window.onload = (event) =>
     */
 
     filterGallery(null, 'sfw');
+    this.setTimeout(sortImages, 750);
 
 
-    window.addEventListener('resize', function(event) {
-        //this.setTimeout(sortImages, 0.5);
-        sortImages();
-        this.setTimeout(sortImages, 750);
-    }, true);
+    
 
     
 
