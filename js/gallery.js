@@ -1,44 +1,85 @@
 //Global variables
-var sortedImageList = [];
+var imageList;
 
 //Functions
 function filterGallery(button, type)
 {
-    let gallery = document.getElementById("gallery");
-    let images = gallery.getElementsByTagName("img");
+    //let gallery = document.getElementById("gallery");
+    //let images = gallery.getElementsByTagName("img");
 
-    for (var i = 0; i < images.length; i++) 
+    for (let i = 0; i < imageList.length; i++) 
     {
         if(type == null)
         {
-            images[i].classList.remove("hidden");
+            imageList[i].classList.remove("hidden");
         }
-        else if( images[i].classList.contains(type))
+        else if( imageList[i].classList.contains(type))
         {
-            images[i].classList.remove("hidden");
+            imageList[i].classList.remove("hidden");
         }else
         {
-            images[i].classList.add("hidden");
+            imageList[i].classList.add("hidden");
         }
     }
 
+    /*
     sortedImageList = [...images].sort((a, b) => a.getBoundingClientRect().top > b.getBoundingClientRect().top ? 1 : -1)
                              .filter(function(obj){ return !obj.classList.contains("hidden") });
 
+    */
+   sortImages();
 
-    //sortedImageList.forEach((element) => console.log(element));
-
-    if(button)
+    /*
+    let found=0;
+    for(let i = 0; i < desiredImageOrder.length; i++)
     {
-        let filterButtons = document.getElementById("gallery-filters");
-        let selectedButtons = filterButtons.getElementsByClassName("selected");
-        for (let i = 0; i < selectedButtons.length; i++) 
+        let index = sortedImageList.findIndex( (e) => e.src === desiredImageOrder[i].src);
+
+        console.log("image "+desiredImageOrder[i].src+" found in "+index)
+        if(index >= 0)
         {
-            selectedButtons[i].classList.remove("selected");
+            console.log("swap "+index+" with "+found)
+
+            sortedImageList[index].src = sortedImageList[found].src;
+            sortedImageList[index].alt = sortedImageList[found].alt;
+            sortedImageList[index].classList = sortedImageList[found].classList;
+            sortedImageList[index].dataset = sortedImageList[found].dataset;
+
+            sortedImageList[found].src = desiredImageOrder[i].src;
+            sortedImageList[found].alt = desiredImageOrder[i].alt;
+            sortedImageList[found].classList = desiredImageOrder[i].classList;
+            sortedImageList[found].dataset = desiredImageOrder[i].dataset;
+            found++;
         }
-    
-        button.classList.add("selected");
     }
+    */
+    /*
+    let j = 0;
+    for (let i=0; i<sortedImageList.length; i++){
+        while(desiredImageOrder[j].classList.contains("hidden") && j < desiredImageOrder.length-1){
+            j++;
+        }
+
+        console.log("change "+sortedImageList[i].src+" with "+desiredImageOrder[j].src);
+
+        sortedImageList[i].src=desiredImageOrder[j].src;
+
+        j++;
+    }
+        */
+    //desiredImageOrder.forEach((element) => console.log(element));
+
+    if(button == null) return;
+
+    let filterButtons = document.getElementById("gallery-filters");
+    let selectedButtons = filterButtons.getElementsByClassName("selected");
+    for (let i = 0; i < selectedButtons.length; i++) 
+    {
+        selectedButtons[i].classList.remove("selected");
+    }
+
+    button.classList.add("selected");
+    
     
 }
 
@@ -68,12 +109,19 @@ function navigateImages(dir){
 
     let imgOverlay = document.getElementById("overlay-image");
 
-    let currentIndex = sortedImageList.findIndex(a => a.src === imgOverlay.src) + dir;
+    let currentIndex = [...imageList].findIndex(a => a.src === imgOverlay.src);
 
-    if(currentIndex == sortedImageList.length) currentIndex = 0;
-    else if(currentIndex < 0) currentIndex = sortedImageList.length - 1;
+    do{
+        currentIndex += dir;
 
-    onGalleryImageClick(sortedImageList[currentIndex]);
+        if(currentIndex == imageList.length) currentIndex = 0;
+        else if(currentIndex < 0) currentIndex = imageList.length - 1;
+    }
+    while(imageList[currentIndex].classList.contains("hidden"));
+
+    
+
+    onGalleryImageClick(imageList[currentIndex]);
 }
 
 function checkArrowKeys(event){
@@ -98,17 +146,22 @@ function showImageTextOverlay(show){
     }
 }
 
-function sortImages(columncount){
+function sortImages(){
+    
     let gallery =  document.getElementById("gallery");
 
     let columns = [];
-    let columnWidth = (gallery.clientWidth / 5) - (window.innerWidth * 0.01) ;
+    let columnWidth = (gallery.clientWidth - (4 * window.innerWidth * 0.01)) / 5;
+
+    let galleryBounds = gallery.getBoundingClientRect();
 
     console.log(gallery.clientWidth+"/5 - "+window.innerWidth+"*0.01 = "+columnWidth);
-    for (let i = 0; i < columncount; i++) 
+
+
+    for (let i = 0; i < 5; i++) 
     {
         //initialize columns (0 height for each)
-        columns.push(200)
+        columns.push(0);
     }
 
     let imageList = gallery.children;
@@ -117,19 +170,23 @@ function sortImages(columncount){
     {
         if(imageList[i].classList.contains("hidden")) continue;
 
-        console.log("image: "+imageList[i].src)
+        //console.log("image: "+imageList[i].src)
         let min = Math.min.apply(null, columns);
         let index = columns.indexOf(min);
-        let xpos = index * columnWidth;
+        let xpos = index * columnWidth + index * window.innerWidth * 0.01;
 
-        columns[index] += imageList[i].clientHeight + window.innerWidth * 0.01;
-
-        
-        imageList[i].setAttribute("style", "width:"+(columnWidth) +"px !important;");
-        imageList[i].style.position = "absolute";
+        imageList[i].style.width =columnWidth +"px";
+        //imageList[i].style.position = "absolute";
         imageList[i].style.left = xpos+"px";
         imageList[i].style.top = min+"px";
+
+
+        columns[index] += imageList[i].getBoundingClientRect().height + window.innerWidth * 0.01;
+        
+        console.log(imageList[i].src+": "+imageList[i].getBoundingClientRect().height + " + "+window.innerWidth * 0.01);
     }
+
+    gallery.style.height = Math.max.apply(null, columns)+"px";
 
 }
 
@@ -139,13 +196,13 @@ window.onload = (event) =>
     window.addEventListener('scroll', () => {updateNavbarOnScroll()});
 
     let gallery = document.getElementById("gallery");
-    let images = gallery.getElementsByTagName("img");
+    imageList = gallery.getElementsByTagName("img");
 
-    for (let i = 0; i < images.length; i++) 
+    for (let i = 0; i < imageList.length; i++) 
     {
         
-        let img = images[i];
-        images[i].addEventListener('click', function(){onGalleryImageClick(img);});
+        let img = imageList[i];
+        imageList[i].addEventListener('click', function(){onGalleryImageClick(img);});
     }
 
     let overlay = document.getElementById("gallery-overlay");
@@ -165,10 +222,19 @@ window.onload = (event) =>
     overlayImg.addEventListener('mouseout', function(){
         showImageTextOverlay(false);
     });
+    /*
+    originalImgList = gallery.cloneNode(true);
 
-    //sortImages(5);
+
+    desiredImageOrder = [...originalImgList.children];
+    */
 
     filterGallery(null, 'sfw');
+
+
+    window.addEventListener('resize', function(event) {
+        sortImages();
+    }, true);
 
     
 

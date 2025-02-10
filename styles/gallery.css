@@ -1,4 +1,4 @@
-
+/*
 #gallery{
     line-height: 0;       
     -webkit-column-count: 5;    
@@ -21,6 +21,34 @@
     align-self: start;
 
     transition: 0.25s;
+}
+    */
+
+#gallery
+{
+    position: relative;
+}
+
+#gallery img
+{
+    border-radius: 10px;
+
+    position: absolute;
+    width: calc(20vw - 1.4vw);
+    height: auto;
+
+    transition: 0.75s;
+}
+
+#gallery img.hidden
+{
+    /*width: 0px !important;
+    height: 0px !important;*/
+
+    display: block !important;
+    opacity: 0;
+
+    transition: 0.75s;
 }
 
 /*
