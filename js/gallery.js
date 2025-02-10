@@ -85,7 +85,11 @@ function filterGallery(button, type)
 
 function onGalleryImageClick(image){
     let imgOverlay = document.getElementById("overlay-image");
-    imgOverlay.src=image.src;
+
+    imgOverlay.dataset.thumbnail = image.src;
+    
+    imgOverlay.src = image.src;
+    imgOverlay.src = image.src.replace("Thumbnails/", "");
 
     let titleOverlay = document.getElementById("overlay-text-title");
     let yearOverlay = document.getElementById("overlay-text-year");
@@ -109,7 +113,7 @@ function navigateImages(dir){
 
     let imgOverlay = document.getElementById("overlay-image");
 
-    let currentIndex = [...imageList].findIndex(a => a.src === imgOverlay.src);
+    let currentIndex = [...imageList].findIndex(a => a.src === imgOverlay.dataset.thumbnail);
 
     do{
         currentIndex += dir;
@@ -237,11 +241,5 @@ window.onload = (event) =>
     */
 
     filterGallery(null, 'sfw');
-    this.setTimeout(sortImages, 750);
-
-
-    
-
-    
-
+    this.setTimeout(sortImages, 1000);
 }
