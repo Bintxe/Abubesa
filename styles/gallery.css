@@ -34,17 +34,19 @@
     border-radius: 10px;
 
     position: absolute;
-    /*width: calc(20vw - 1.25vw);
+    /*
+    width: calc(20vw - 1.25vw);
     height: auto;*/
     opacity: 1;
 
-    transition: 0.75s;
+    transition: 0.5s 0.25s ease-in-out;
 }
 
 #gallery img.hidden
 {
     /*width: 0px !important;
     height: 0px !important;*/
+    top: 0px  !important;
 
     display: block !important;
     pointer-events: none;
@@ -52,7 +54,7 @@
     
     opacity: 0;
 
-    transition: 0.75s;
+    transition: opacity 0.25s ease-in, top 0.4s ease-in;
 }
 
 /*

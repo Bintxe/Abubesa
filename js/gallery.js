@@ -235,6 +235,7 @@ window.onload = (event) =>
     window.addEventListener('resize', function(event) {
         //this.setTimeout(sortImages, 0.5);
         sortImages();
+        this.setTimeout(sortImages, 750);
     }, true);
 
     
