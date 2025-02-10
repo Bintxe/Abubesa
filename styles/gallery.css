@@ -46,6 +46,9 @@
     height: 0px !important;*/
 
     display: block !important;
+    pointer-events: none;
+    z-index: -1;
+    
     opacity: 0;
 
     transition: 0.75s;
