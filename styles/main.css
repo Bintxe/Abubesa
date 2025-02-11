@@ -141,6 +141,10 @@ a
 }
 
 footer{
+    
+}
+
+.footer-box{
     justify-content: space-evenly;
     display: flex;
     max-width: 480px;
