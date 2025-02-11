@@ -1,0 +1,35 @@
+
+
+body{
+    background-color: var(--web-black);
+
+    color: var(--web-beige);
+}
+
+#navbar{
+    background-color: var(--web-black);
+}
+
+a
+{
+    color: var(--web-red);
+}
+
+#navbar a:hover
+{
+    color: var(--web-beige);
+}
+
+.main-box{
+    background-color: var(--web-black);    
+}
+
+.social-logo
+{
+    background-color: var(--web-red);
+}
+
+.social-logo:hover
+{
+    background-color: var(--web-beige);
+}

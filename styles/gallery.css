@@ -24,6 +24,10 @@
 }
     */
 
+html{
+    scroll-behavior: smooth;
+}
+
 #gallery
 {
     position: relative;

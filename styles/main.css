@@ -5,6 +5,7 @@
     --web-yw: rgb(251, 169, 15);
     --web-blue: rgb(106, 133, 205);
     --web-beige: rgb(244, 240, 231);
+    --web-black: rgb(15, 15, 15);
 
     --main-bg-color: var(--web-beige);
     --main-fg-color: black;
