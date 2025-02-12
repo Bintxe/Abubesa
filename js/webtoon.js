@@ -1,5 +1,6 @@
 //Global variables
 var language = "es";
+var totalImages = 77;
 
 var gallery = document.getElementById("webtoon-box");
 var webtoonImages = gallery.children;
@@ -11,6 +12,7 @@ var img;
 var galleryIndex = 1;
 
 //Functions
+/*
 function LoadWebtoonImage() {
     
     if (endLoad) {
@@ -43,8 +45,41 @@ function OnImageExists() {
 function OnImageError() {
     endLoad = true;
 }
+*/
 
-function ChangeLanguage(btn){
+function preloadImages()
+{
+    for(var i = 0; i < totalImages; i++)
+    {
+        let img = new Image();
+        img.src = "../img/test.png";
+        img.width = 800;
+        img.height = 1280;
+
+        gallery.appendChild(img);
+    }
+}
+
+function loadWebtoonImage(){
+    let currentScrollPos = window.scrollY;
+
+    let scrolledImg = Math.round(currentScrollPos / 1280);
+
+    //load scrolled img, 1 previous and 3 next
+    for(let i = Math.max(scrolledImg - 1, 0); i< Math.min(scrolledImg + 3, webtoonImages.length); i++){
+        
+        let desiredSrc = '../img/Hong/Webtoon/'+ language + '/Hong-Episodio1_' +  String(i+1).padStart(3,0) + '.png';
+        if(webtoonImages[i].getAttribute("src") != desiredSrc){
+            webtoonImages[i].src = desiredSrc;
+    
+            webtoonImages[i].removeAttribute("height");
+        }
+        
+    }
+    
+}
+
+function changeLanguage(btn){
     let sel = btn.dataset.language;
 
     if(language === sel) return;
@@ -66,11 +101,13 @@ function ChangeLanguage(btn){
 
 
 //Main execution cycle
-let myInterval = setInterval(() => {LoadWebtoonImage(myInterval);}, 1);
+/*let myInterval = setInterval(() => {LoadWebtoonImage(myInterval);}, 1);*/
 
 window.onload = (event) =>
 {
+    preloadImages();
+    loadWebtoonImage();
+
     window.addEventListener('scroll', () => {updateNavbarOnScroll()});
-
-
+    window.addEventListener('scroll', () => {loadWebtoonImage()});
 }
