@@ -9,7 +9,7 @@ function updateNavbarOnScroll () {
         document.getElementById("navbar").style.top = "0";
     } else if(currentScrollPos > 300)
     {
-        document.getElementById("navbar").style.top = "-8vh";
+        document.getElementById("navbar").style.top = "-12vh";
     }
     prevScrollpos = currentScrollPos;
 }

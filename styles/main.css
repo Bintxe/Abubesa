@@ -35,13 +35,9 @@ a
 }
 
 #navbar{
-    /*position: absolute;*/
     top: 0px;
     margin: 0 auto;
     width: 100%;
-    height: 8vh;
-    min-height: 80px;
-    display: flex;
     background-color: var(--web-beige);
 
     position: fixed;
@@ -56,8 +52,24 @@ a
     transition: 0.2s;
 }
 
+#navbar-top{
+    height: 8vh;
+    min-height: 80px;
+    display: flex;
+}
+
+#navbar-bot{
+    height: 3vh;
+    min-height: 30px;
+    width: 100%;
+
+    background-color: var(--web-red);
+}
+
+
 .menu-logo{
-    min-width: 420px;
+    min-width: 250px;
+    width: 250px;
 }
 
 .logo{
@@ -67,20 +79,20 @@ a
 }
 
 .menu-span{
-    width: 12vw;
+    width: 7vw;
 }
 
 .menu{
     width: 100%;
     height: 100%;
-    padding: 0 7vh;
+    /*padding: 0 7vh;*/
     display: inline-flex;
     justify-content: space-evenly;
 }
 
 .menu-item{
     /*position: relative;*/
-    margin: 0 0.75vw;
+    margin: 0 2.5vw;
     /*text-align: center; */
     /*vertical-align: bottom; */
     font-size: 1.2em; 
@@ -88,6 +100,20 @@ a
     font-weight: 700;
     text-transform: uppercase;
     font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.submenu{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.submenu .menu-item a{
+    color: black;
 }
 
 .main-box{
