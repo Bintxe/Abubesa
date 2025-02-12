@@ -95,6 +95,8 @@ function changeLanguage(btn){
                 }        
             }
             btn.classList.remove("greyed");
+
+            loadWebtoonImage();
             break;
     }
 }
