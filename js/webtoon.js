@@ -52,7 +52,7 @@ function preloadImages()
     for(var i = 0; i < totalImages; i++)
     {
         let img = new Image();
-        img.src = "../img/test.png";
+        img.src = "../img/DummyImage.png";
         img.width = 800;
         img.height = 1280;
 
@@ -71,7 +71,6 @@ function loadWebtoonImage(){
         let desiredSrc = '../img/Hong/Webtoon/'+ language + '/Hong-Episodio1_' +  String(i+1).padStart(3,0) + '.png';
         if(webtoonImages[i].getAttribute("src") != desiredSrc){
             webtoonImages[i].src = desiredSrc;
-    
             webtoonImages[i].removeAttribute("height");
         }
         
