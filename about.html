@@ -3,37 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css" type="text/css">
-    <link rel="stylesheet" href="../styles/gallery.css" type="text/css">
-    <link rel="stylesheet" href="../styles/hong.css" type="text/css">
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-    <title>Hong - Fanart</title>
+    <title>Bintxe</title>
 </head>
-
 <body>
-    <!-- Begin of navbar-->
+    <!-- Begin of nav bar-->
     <header id="navbar">
         <div id="navbar-top">
             <div class="menu-logo">
-                <a href="../index.html">
-                    <img class="logo" src="../img/Bintxe_web_logo_2.png"/>
+                <a href="./index.html">
+                    <img class="logo" src="./img/Bintxe_web_logo_2.png"/>
                 </a>
             </div>
             <div class="menu-span"></div>
             <div class="menu">
                 <div class="menu-item" >
-                    <a href="../hong.html">Hong</a>
+                    <a href="./hong.html">Hong</a>
                 </div>
                 <div class="menu-item hidden" >
                     <a href="">Futuro</a>
                 </div>
                 <div class="menu-item" >
-                    <a href="../gallery.html">Artworks</a>
+                    <a href="./gallery.html">Artworks</a>
                 </div>
                 <div class="menu-item" >
-                    <a href="">About</a>
+                    <a href="./about.html">About</a>
                 </div>
             </div>
             <div class="menu-span"></div>
@@ -42,76 +39,14 @@
                 </div>
             </div>
         </div>
-        <div id="navbar-bot">
-            <div class="submenu">
-                <div class="menu-span" ></div>
-                <div class="menu-item" >
-                    <a href="../hong.html">Plot</a>
-                </div>
-                <div class="menu-item" >
-                    <a href="webtoon.html">Prologue</a>
-                </div>
-                <div class="menu-item" >
-                    <a href="comic.html">Read</a>
-                </div>
-                <div class="menu-item" >
-                    <a href="fanart.html">Fanart</a>
-                </div>
-                <div class="menu-span" ></div>
-            </div>
-        </div>
     </header>
-
-    <div id="gallery-overlay" class="hidden">
-        <div id="overlay-background"></div>
-        <div class="gallery-arrow-button" onclick="navigateImages(-1);" style="rotate:-90deg">
-
-        </div>
-        <div class="overlay-image-box">
-            <div id="overlay-image-text">
-                <p id="overlay-text-title" style="font-weight: 350;">
-                </p>
-                <p id="overlay-text-year">
-                    2022
-                </p>
-                <p id="overlay-text-extra">
-                </p>
-            </div>
-            <img id="overlay-image" src="../img/Fanarts/Atari.JPEG" />
-        </div>
-        <div class="gallery-arrow-button" onclick="navigateImages(1);" style="rotate:90deg">
-
-        </div>
-    </div>
 
     <!-- Begin of main section-->
     <div class="main-box">
         <div class="margin-box">
-            <div id="gallery-filters"></div>
-            <!--
-            <div id="gallery-filters">
-                <button class="selected" onclick="filterGallery(this, 'sfw');"><p>SFW</p></button>
-                <button onclick="filterGallery(this, 'nsfw');"><p>NSFW</p></button>
-                <button onclick="filterGallery(this);"><p>All</p></button>
-            </div>
-            -->
-            <div id="gallery">
-
-            <img data-year="2020" alt="Atari" class="sfw hidden" src="../img/Fanarts/Atari.JPEG" />
-            <img data-year="2020" alt="JG" class="sfw hidden" src="../img/Fanarts/JG1.png" />
-            <img data-year="2022" alt="JG" class="sfw hidden" src="../img/Fanarts/JG2.jpg" />
-            <img data-year="2019" alt="Laura Estrella" class="sfw hidden" src="../img/Fanarts/Laura.png" />
-            <img data-year="2020" alt="Noa" class="sfw hidden" src="../img/Fanarts/Noa1.png" />
-            <img data-year="2021" alt="Noa" class="sfw hidden" src="../img/Fanarts/Noa2.png" />
-            <img data-year="2023" alt="reiYamizawa" class="sfw hidden" src="../img/Fanarts/reiYamizawa.jpg" />
-            </div>
-            
+            Coming soon...
         </div>
     </div>
-
-    <a href="#">
-        <div class="go-up-button hidden"></div>
-    </a>
 
     <!-- Begin of footer of page -->
     <footer>
@@ -133,9 +68,8 @@
             </div>
         </div>
     </footer>
+
+    
 </body>
-
-<script src="../js/main.js"></script>
-<script src="../js/gallery.js"></script>
-
+<script src="js/main.js"></script>
 </html>

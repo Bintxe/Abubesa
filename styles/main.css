@@ -19,6 +19,8 @@ body{
     /*height: 100vh;
     width: 100vw;*/
     background-color: var(--main-bg-color);
+
+    font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a
@@ -136,21 +138,17 @@ a
 }
 
 .content-box{
+    height: 50vh;
+    min-height: 400px;
+    padding: 0 1% 0.5% 50%;
+    margin-bottom: 3vh;
+    
     background-image: url(../img/Hong_Webcomic_Portada_2.png);
     background-position: 50% 50%;
     background-size: cover, cover;
     border-radius: 25px;
-    /*padding: 16vh 1vw 2vh 55vw;*/
-    /*padding: 2px 1vw 0 55vw;*/
-    padding: 0 1% 0.5% 50%;
-    /*top: -100px;*/
-    /*margin: 15px;*/
-    /*width: 100%;*/
+
     text-align: right;
-    margin: 3vh 0;
-    
-    height: 50vh;
-    min-height: 400px;
     align-content: end;
 }
 

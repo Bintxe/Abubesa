@@ -21,7 +21,9 @@ a
 }
 
 .main-box{
-    background-color: var(--web-black);    
+    background-color: var(--web-black);
+    
+    padding-top: 11vh;
 }
 
 .social-logo
