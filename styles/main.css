@@ -226,3 +226,25 @@ a
     fill: var(--main-fg-color);
     vertical-align: bottom;
 }
+
+#about-box{
+    width: 80%;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+#about-box img{
+    max-width: 30%;
+    border-radius: 50%;
+}
+
+#about-box .inside-text{
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--web-black);
+    text-shadow: none;
+    vertical-align: middle;
+    align-self: center;
+    margin-left: 5%;
+}
