@@ -196,6 +196,7 @@ a
     font-size: 4rem;
     color: var(--web-red);
     text-shadow: -2px -2px 0 #000,2px -2px 0 #000, -2px 2px 0 #000, 5px 5px 0 #000;
+    margin: 0 3% 1.5% 0;
 }
 
 footer{
@@ -240,6 +241,8 @@ footer{
 
 #about-box img{
     max-width: 30%;
+    height: fit-content;
+    align-self: center;
     border-radius: 50%;
 }
 
@@ -250,5 +253,5 @@ footer{
     text-shadow: none;
     vertical-align: middle;
     align-self: center;
-    margin-left: 5%;
+    margin: 0 5%;
 }
