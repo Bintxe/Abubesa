@@ -36,6 +36,18 @@ a
     background-color: var(--web-beige);
 }
 
+.content-box{
+    min-height: 480px;
+}
+
+.character-box{
+    width: 100%;
+    border-radius: 0;
+    min-height: 600px;
+    height: 60vh;
+    background-color: var(--web-red);
+}
+
 .inside-text{
   width: 40%;
   height: 100%;
