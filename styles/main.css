@@ -190,13 +190,20 @@ a
     padding: 0 1% 1% 0;
 }
 
-.inside-text{
+.content-title{
     font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
     font-size: 4rem;
     color: var(--web-red);
     text-shadow: -2px -2px 0 #000,2px -2px 0 #000, -2px 2px 0 #000, 5px 5px 0 #000;
     margin: 0 3% 1.5% 0;
+}
+
+.inside-text{
+    font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--web-black);
 }
 
 footer{
@@ -244,6 +251,10 @@ footer{
     height: fit-content;
     align-self: center;
     border-radius: 50%;
+}
+
+#about-box h1{
+    margin-top: 0;
 }
 
 #about-box .inside-text{
