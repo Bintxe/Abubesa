@@ -36,3 +36,17 @@ a
     background-color: var(--web-beige);
 }
 
+.inside-text{
+  width: 40%;
+  height: 100%;
+  align-content: center;
+  text-align: justify;
+  float: right;
+  padding: 0 5%;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+#gallery-filters{
+    margin-top: 5%;
+}

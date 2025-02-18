@@ -74,45 +74,6 @@ html{
     cursor: pointer;
 }
 
-#gallery-filters{
-    margin: 1vh auto 2vh auto;
-    justify-content: space-evenly;
-    max-width: 720px;
-    display: flex;
-}
-
-#gallery-filters button{
-    align-self: flex-start;
-    border-radius: 50px;
-    display: inline-flex;
-    min-width: 150px;
-    min-height: 40px;
-    border: 3px solid var(--main-fg-color);
-    background-color: var(--main-bg-color);
-    margin: 0 10px;
-    transition: 0.2s;
-}
-
-#gallery-filters button p{
-    text-align: center;
-    width: 100%;
-    vertical-align: middle;
-    color: var(--main-fg-color);
-    font-weight: 500;
-    text-transform: uppercase;
-    font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;;
-}
-
-#gallery-filters button:hover{
-    background-color:  var(--web-yw);
-    transition: 0.2s;
-    cursor:pointer;
-}
-
-#gallery-filters .selected{
-    background-color:  var(--web-yw);
-}
-
 .go-up-button{
     background-image: url(../img/flecha2.png);
     background-size: cover;
