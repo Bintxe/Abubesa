@@ -45,8 +45,20 @@ a
   padding: 0 5%;
   font-size: 1.3rem;
   line-height: 1.5;
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.inside-paragraph p:first-child{
+    margin-top: 0;
+}
+
+.inside-paragraph p:last-child{
+    margin-bottom: 0;
 }
 
 #gallery-filters{
-    margin-top: 5%;
+    margin: 0;
 }
