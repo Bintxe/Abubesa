@@ -129,6 +129,7 @@ a
     background-position: 100% 30%;
     filter:grayscale(100%);
     background-color: var(--web-beige);
+    transition: 0.15s;
 }
 
 #char-selection button.selected{
@@ -137,7 +138,8 @@ a
 
 #char-selection button:hover{
     filter:grayscale(0%);
-    transition: 0.2s;
+    transition: 0.15s;
+    scale: 1.05;
 }
 
 #char-selection img{
