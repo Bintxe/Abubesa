@@ -16,7 +16,7 @@
         <div id="navbar-top">
             <div class="menu-logo">
                 <a href="./index.html">
-                    <img class="logo" src="./img/Bintxe_web_logo_2.png"/>
+                    <img class="logo" src="./img/logo2.png"/>
                 </a>
             </div>
             <div class="menu-span"></div>
@@ -77,7 +77,7 @@
             </div>
             <h1 style="margin:5rem 0 0 0;">Characters</h1>
         </div>
-        <div class="character-box">
+        <div id="character-box">
             <div class="margin-box">
                 <div class="inside-text">
                     <div class="inside-paragraph">
@@ -98,12 +98,12 @@
         </div>
         <div class="margin-box">
             <div id="char-selection">
-                <button class="" style="background-image: url(./img/Hong/Characters/Hong.png);"></button>
-                <button style="background-image: url(./img/Hong/Characters/Magambo.png);"></button>
-                <button style="background-image: url(./img/Hong/Characters/Ebba.png);"></button>
-                <button style="background-image: url(./img/Hong/Characters/Thulani.png);"></button>
-                <button style="background-image: url(./img/Hong/Characters/Ash.png);"></button>
-                <button style="background-image: url(./img/Hong/Characters/Viktor.png);"></button>
+                <button class="selected" onclick="selectCharacter(this);" data-character="Hong" style="background-image: url(./img/Hong/Characters/Hong.png);"></button>
+                <button class="" onclick="selectCharacter(this);" data-character="Magambo" style="background-image: url(./img/Hong/Characters/Magambo.png);"></button>
+                <button class="" onclick="selectCharacter(this);" data-character="Ebba" style="background-image: url(./img/Hong/Characters/Ebba.png);"></button>
+                <button class="" onclick="selectCharacter(this);" data-character="Thulani" style="background-image: url(./img/Hong/Characters/Thulani.png);"></button>
+                <button class="" onclick="selectCharacter(this);" data-character="Ash" style="background-image: url(./img/Hong/Characters/Ash.png);"></button>
+                <button class="" onclick="selectCharacter(this);" data-character="Viktor" style="background-image: url(./img/Hong/Characters/Viktor.png);"></button>
             </div>
         </div>
     </div>
@@ -133,4 +133,5 @@
     
 </body>
 <script src="js/main.js"></script>
+<script src="js/hong.js"></script>
 </html>

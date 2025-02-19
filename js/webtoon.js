@@ -5,11 +5,13 @@ var totalImages = 77;
 var gallery = document.getElementById("webtoon-box");
 var webtoonImages = gallery.children;
 
+/*
 var continueLoad = true;
 var endLoad = false;
 
 var img;
 var galleryIndex = 1;
+*/
 
 //Functions
 /*

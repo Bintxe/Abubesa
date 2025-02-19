@@ -2,7 +2,7 @@
 
 body{
     background-color: var(--web-black);
-    background-image: url(../img/fondo_web.jpg);
+    background-image: url(../img/fondo_web2.png);
     background-size: cover;
 
     color: var(--web-beige);
@@ -75,7 +75,7 @@ a
 }
 
 
-.character-box{
+#character-box{
     width: 100%;
     border-radius: 0;
     min-height: 600px;
@@ -83,7 +83,7 @@ a
     background-color: var(--web-red);
 }
 
-.character-box .margin-box
+#character-box .margin-box
 {
     height: 100%;
     padding: 0 1.5vw;
@@ -93,12 +93,12 @@ a
     justify-content: center;
 }
 
-.character-box .inside-text{
+#character-box .inside-text{
     padding: 0;
     max-width: 30%;
 }
 
-.character-box .main-image{
+#character-box .main-image{
     scale: 2.2;
     transform: translate(0%,16%);
     max-height: 100%;
@@ -122,18 +122,20 @@ a
     overflow: clip;
     border-radius: 15px;
     border: 0px solid;
+    cursor: pointer;
 
     background-image: url("../img/Hong/Characters/Hong.png");
     background-size: 150%;
     background-position: 100% 30%;
     filter:grayscale(100%);
     background-color: var(--web-beige);
+}
 
+#char-selection button.selected{
+    filter:grayscale(0%);
 }
 
 #char-selection button:hover{
-    cursor: pointer;
-
     filter:grayscale(0%);
     transition: 0.2s;
 }
