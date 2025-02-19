@@ -2,6 +2,8 @@
 
 body{
     background-color: var(--web-black);
+    background-image: url(../img/fondo_web.jpg);
+    background-size: cover;
 
     color: var(--web-beige);
 }
@@ -21,7 +23,12 @@ a
 }
 
 .main-box{
-    background-color: var(--web-black);
+    /*background-color: var(--web-black);*/
+
+    background-color: transparent;
+
+    
+    /*background-blend-mode: multiply;*/
     
     padding-top: 11vh;
 }
