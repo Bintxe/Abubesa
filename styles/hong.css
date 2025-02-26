@@ -31,6 +31,9 @@ a
     /*background-blend-mode: multiply;*/
     
     padding-top: 11vh;
+
+    opacity: 1;
+    transition: 1.5s;
 }
 
 .social-logo

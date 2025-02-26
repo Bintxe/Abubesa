@@ -108,3 +108,9 @@ function selectCharacter(button){
 
 
 //Main execution cycle
+window.onload = (event) =>
+{
+    document.getElementsByClassName("main-box")[0].classList.remove("invisible");
+
+    selectCharacter(document.getElementById("char-selection").children[0]);
+}
