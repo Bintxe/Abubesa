@@ -1,5 +1,5 @@
 //Global variables
-var descHong = ["RAVEN", "HONG", "56", "[REDACTED]","<p>Todos los lugareños de los alrededores del lago Kivu saben quién es la ermitaña del bosque, pero nadie la conoce realmente.</p><p>Maestra de artes marciales y experta en supervivencia, Raven Hong se enfrenta a cualquier guerrilla o ejército en solitario con tal de defender a su gente sin importar lo despiadados y crueles que puedan ser.</p><p>Las reminiscencias de su pasado le recuerdan a diario que ella no fue tan diferente a las personas contra las que lucha.</p>"];
+var descHong = ["RAVEN", "HONG", "56", "[REDACTED]","<p>Everyone around Lake Kivu knows who the forest hermit is, but no one really knows her.</p><p>A martial arts master and survival expert, Raven Hong will take on any guerrilla or army single-handedly to defend her people no matter how ruthless and cruel they may be.</p><p>Memories of her past make her realize daily that she was not so different from the people she fights against.</p>"];
 var descMagambo = ["", "MAGAMBO", "??", "aaaaaa", "<p>blablabla</p>"];
 var descEbba = ["", "EBBA", "??", "aaaaaa","<p>blebleble</p>"];
 var descThulani = ["", "THULANI", "??", "aaaaaa","<p>bliblibli</p>"];
