@@ -7,14 +7,6 @@ var descAsh = ["", "Ash", "??", "aaaaaa","<p>blobloblo</p>"];
 var descViktor = ["", "Viktor", "??", "aaaaaa","blublublublu"];
 
 //Preload images
-let allImages = document.getElementsByClassName("all-images")[0].children;
-
-var imageHong = allImages[0];
-var imageMagambo = allImages[1];
-var imageEbba = allImages[2];
-var imageThulani = allImages[3];
-var imageAsh = allImages[4];
-var imageViktor = allImages[5];
 
 
 //Functions
@@ -28,14 +20,14 @@ function selectCharacter(button){
     }
 
     let charContent = characterBox.getElementsByClassName("inside-paragraph")[0];
-    let charImage = characterBox.getElementsByClassName("main-image")[0];
+    let charImage = characterBox.querySelector( '.main-image:not(.invisible)');
 
     /*
     let charTitle = document.createElement("h1");
     charTitle.innerHTML = button.dataset.character;*/
 
     charContent.classList.add("invisible");
-    charImage.classList.add("invisible");
+    if(charImage) charImage.classList.add("invisible");
 
     characterBox.dataset.character = button.dataset.character;
 
@@ -59,7 +51,8 @@ function selectCharacter(button){
                 charAge.innerHTML = descHong[2];
                 charNation.innerHTML = descHong[3];
                 charDesc.innerHTML = descHong[4];
-                charImage.src = imageHong.src;
+                
+                characterBox.getElementsByClassName("main-image")[0].classList.remove("invisible");
                 break;
             case "Magambo":
                 charName.innerHTML = descMagambo[0];
@@ -67,7 +60,8 @@ function selectCharacter(button){
                 charAge.innerHTML = descMagambo[2];
                 charNation.innerHTML = descMagambo[3];
                 charDesc.innerHTML = descMagambo[4];
-                charImage.src = imageMagambo.src;
+                
+                characterBox.getElementsByClassName("main-image")[1].classList.remove("invisible");
                 break;
             case "Ebba":
                 charName.innerHTML = descEbba[0];
@@ -75,7 +69,8 @@ function selectCharacter(button){
                 charAge.innerHTML = descEbba[2];
                 charNation.innerHTML = descEbba[3];
                 charDesc.innerHTML = descEbba[4];
-                charImage.src = imageEbba.src;
+                
+                characterBox.getElementsByClassName("main-image")[2].classList.remove("invisible");
                 break;
             case "Thulani":
                 charName.innerHTML = descThulani[0];
@@ -83,7 +78,8 @@ function selectCharacter(button){
                 charAge.innerHTML = descThulani[2];
                 charNation.innerHTML = descThulani[3];
                 charDesc.innerHTML = descThulani[4];
-                charImage.src = imageThulani.src;
+                
+                characterBox.getElementsByClassName("main-image")[3].classList.remove("invisible");
                 break;
             case "Ash":
                 charName.innerHTML = descAsh[0];
@@ -91,7 +87,8 @@ function selectCharacter(button){
                 charAge.innerHTML = descAsh[2];
                 charNation.innerHTML = descAsh[3];
                 charDesc.innerHTML = descAsh[4];
-                charImage.src = imageAsh.src;
+                
+                characterBox.getElementsByClassName("main-image")[4].classList.remove("invisible");
                 break;
             case "Viktor":
                 charName.innerHTML = descViktor[0];
@@ -99,12 +96,13 @@ function selectCharacter(button){
                 charAge.innerHTML = descViktor[2];
                 charNation.innerHTML = descViktor[3];
                 charDesc.innerHTML = descViktor[4];
-                charImage.src = imageViktor.src;
+                
+                characterBox.getElementsByClassName("main-image")[5].classList.remove("invisible");
                 break;
         }
 
         charContent.classList.remove("invisible");
-        charImage.classList.remove("invisible");
+        //charImage.classList.remove("invisible");
     
         //charContent.insertBefore(charTitle, charDescription.firstChild);
     }, 200);

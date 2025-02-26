@@ -89,10 +89,13 @@ a
 
 
 #character-box{
+    position: relative;
+    overflow: clip;
     width: 100%;
-    border-radius: 0;
     min-height: 600px;
     height: 60vh;
+
+    border-radius: 0;
     background-color: var(--web-red);
 }
 
@@ -100,7 +103,8 @@ a
 {
     height: 100%;
     padding: 0 1.5vw;
-    overflow: clip;
+    
+    /*overflow: clip;*/
 
     display: flex;
     justify-content: center;
@@ -110,7 +114,10 @@ a
     padding: 0;
     width: 32%;
     min-width: 500px;
-    margin-left: -10%;
+    /*margin-left: -10%;*/
+
+    position: relative;
+    left: -16%;
 }
 
 #character-box .main-image{
@@ -118,6 +125,9 @@ a
     transform: translate(0%,16%);
     max-height: 100%;
     transition: 0.15s;
+
+    position: absolute;
+    left: 50%;
 }
 
 .inside-paragraph h1{
