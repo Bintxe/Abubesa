@@ -33,7 +33,7 @@ a
     padding-top: 11vh;
 
     opacity: 1;
-    transition: 1.5s;
+    transition: opacity 1.5s;
 }
 
 .social-logo
@@ -108,7 +108,7 @@ a
 
 #character-box .inside-text{
     padding: 0;
-    width: 35%;
+    width: 32%;
     min-width: 500px;
     margin-left: -10%;
 }
@@ -121,8 +121,10 @@ a
 }
 
 .inside-paragraph h1{
-    margin-top: 0;
-    font-size: 3.5rem;
+    font-size: 4rem;
+    line-height: 01;
+    text-align: right;
+    margin: auto;
 }
 
 .char-name{
@@ -136,8 +138,8 @@ a
 
 #char-selection{
     margin: 1vh auto 2vh auto;
-    justify-content: space-evenly;
-    max-width: 60%;
+    justify-content: center;
+    max-width: 80%;
     display: flex;
 }
 
@@ -153,7 +155,7 @@ a
     border: 0px solid;
     cursor: pointer;
 
-    background-image: url("../img/Hong/Characters/Hong.png");
+    /*background-image: url("../img/Hong/Characters/Hong.png");*/
     background-size: 150%;
     background-position: 100% 30%;
     filter:grayscale(100%);
