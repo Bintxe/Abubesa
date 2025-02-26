@@ -79,11 +79,11 @@ function selectCharacter(button){
                 charImage.src="./img/Hong/Characters/Ash.png";
                 break;
             case "Viktor":
-                charName.innerHTML =
-                charSurame.innerHTML =
-                charAge.innerHTML =
-                charNation.innerHTML =
-                charDesc.innerHTML =
+                charName.innerHTML = descViktor[0];
+                charSurame.innerHTML = descViktor[1];
+                charAge.innerHTML = descViktor[2];
+                charNation.innerHTML = descViktor[3];
+                charDesc.innerHTML = descViktor[4];
                 charImage.src="./img/Hong/Characters/Viktor.png";
                 break;
         }
