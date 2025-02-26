@@ -1,10 +1,10 @@
 //Global variables
 var descHong = ["Raven", "Hong", "56", "[REDACTED]","<p>Everyone around Lake Kivu knows who the forest hermit is, but no one really knows her.</p><p>A martial arts master and survival expert, Raven Hong will take on any guerrilla or army single-handedly to defend her people no matter how ruthless and cruel they may be.</p><p>Memories of her past make her realize daily that she was not so different from the people she fights against.</p>"];
 var descMagambo = ["Paul", "Magambo", "51", "Rwanda", "<p>Equal parts political leader, businessman and warlord, he heads the Movement for the Defense of the People, a rebel military group based in eastern DRC.</p><p>Thanks to the movement, Magambo controls important deposits of rare earths from which he has made his fortune.</p>"];
-var descEbba = ["Ebba", "Brower", "66", "Netherlands","<p>Director of the Brouwer Foundation, an NGO assigned in the DRC with the mission of denouncing human rights violations.</p><p>Her altruistic sensitivity leads her to help those most in need, although she can be deluded and overconfident.</p>"];
-var descThulani = ["", "Thulani", "??", "aaaaaa","<p>bliblibli</p>"];
-var descAsh = ["", "Ash", "??", "aaaaaa","<p>blobloblo</p>"];
-var descViktor = ["", "Viktor", "??", "aaaaaa","blublublublu"];
+var descEbba = ["Ebba", "Brouwer", "66", "Netherlands","<p>Director of the Brouwer Foundation (BroFound), an NGO assigned in the DRC with the mission of denouncing human rights violations.</p><p>Her altruistic sensitivity leads her to help those most in need, although she can be deluded and overconfident.</p>"];
+var descThulani = ["Samuel", "Thulani", "62", "South Africa","<p>As a retired military officer from the South African Army, Thulani operates as a security advisor for BroFound and Ebba's right-hand man.</p><p>His long career in the military has given him a great knowledge of warfare, which has made him highly cautious and suspicious.</p>"];
+var descAsh = ["Ashleen Murphy", '"Ash"', "27", "Ireland","<p>Ash is a security guard hired by BroFound and her goal is to get its members home in one piece.</p><p>True, she served briefly in her country's military and has no real combat experience, but she is proactive and a team player according to her resume.</p>"];
+var descViktor = ["Viktor", "Sokolov", "25", "Russia","<p>Tired of writing articles about “simple avocado recipes for divorcees” for an online newspaper, Viktor set out to travel to the heart of Africa and try his hand at gonzo journalism.</p><p>He accompanies the BroFound team to write a report on the illegal coltan trade.</p><p>His cocky personality and his fondness for tobacco give him away as a journalist.</p>"];
 
 //Preload images
 
