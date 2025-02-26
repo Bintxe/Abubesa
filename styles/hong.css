@@ -62,12 +62,22 @@ a
   justify-content: space-evenly;
 }
 
+.inside-paragraph{
+    opacity: 1;
+    transition: 0.15s;
+}
+
 .inside-paragraph p:first-child{
     margin-top: 0;
 }
 
 .inside-paragraph p:last-child{
     margin-bottom: 0;
+}
+
+.invisible{
+    opacity: 0;
+    transition: 0.05s;
 }
 
 #gallery-filters{
@@ -95,17 +105,30 @@ a
 
 #character-box .inside-text{
     padding: 0;
-    max-width: 30%;
+    width: 35%;
+    min-width: 500px;
+    margin-left: -10%;
 }
 
 #character-box .main-image{
     scale: 2.2;
     transform: translate(0%,16%);
     max-height: 100%;
+    transition: 0.15s;
 }
 
 .inside-paragraph h1{
     margin-top: 0;
+    font-size: 3.5rem;
+}
+
+.char-name{
+    font-size: 2rem;
+}
+
+.char-description{
+    font-size: 1.05rem;
+    font-weight: 350;
 }
 
 #char-selection{
@@ -117,8 +140,11 @@ a
 
 #char-selection button{
     margin: 0 1vw;
-    width: 400px;
-    height: 225px;
+    width: 8vw;
+    height: 12vw;
+    min-width: 120px;
+    min-height: 180px;
+
     overflow: clip;
     border-radius: 15px;
     border: 0px solid;
@@ -146,4 +172,10 @@ a
     max-width: 100%;
     scale: 1.5;
     transform: translate(-15%, 5%);
+}
+
+.main-image.invisible{
+    opacity: 0;
+    transform: translate(30%,16%) !important;
+    transition: 0.05s;
 }
