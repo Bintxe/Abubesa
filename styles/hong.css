@@ -97,6 +97,7 @@ a
 
     border-radius: 0;
     background-color: var(--web-red);
+    background-image: url(../img/awawa.png);
 }
 
 #character-box .margin-box
@@ -108,6 +109,14 @@ a
 
     display: flex;
     justify-content: center;
+
+    backdrop-filter: blur(10px);
+}
+
+#character-box .inside-paragraph{
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 15px 7.5%;
 }
 
 #character-box .inside-text{
@@ -118,6 +127,8 @@ a
 
     position: relative;
     left: -16%;
+
+    color: var(--web-beige);
 }
 
 #character-box .main-image{
@@ -131,14 +142,18 @@ a
 }
 
 .inside-paragraph h1{
-    font-size: 4rem;
     line-height: 01;
     text-align: right;
-    margin: auto;
+    /*margin: auto;*/
+    margin-bottom: 50px;
 }
 
 .char-name{
     font-size: 2rem;
+}
+
+.char-surname{
+    font-size: 4rem;
 }
 
 .char-description{
