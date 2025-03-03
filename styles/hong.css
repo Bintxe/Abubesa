@@ -98,6 +98,13 @@ a
     border-radius: 0;
     background-color: var(--web-red);
     background-image: url(../img/awawa.png);
+    background-size: cover;
+}
+
+.blur-filter{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
 }
 
 #character-box .margin-box
@@ -109,8 +116,6 @@ a
 
     display: flex;
     justify-content: center;
-
-    backdrop-filter: blur(10px);
 }
 
 #character-box .inside-paragraph{
@@ -121,7 +126,7 @@ a
 
 #character-box .inside-text{
     padding: 0;
-    width: 32%;
+    width: 33%;
     min-width: 500px;
     /*margin-left: -10%;*/
 
@@ -129,6 +134,7 @@ a
     left: -16%;
 
     color: var(--web-beige);
+    font-size: 1.2rem;
 }
 
 #character-box .main-image{
