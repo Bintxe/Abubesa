@@ -141,8 +141,13 @@ a
     left: 50%;
 }
 
+.left-line-text{
+    border-left: 3px solid var(--web-beige);
+    padding: 0 15px;
+}
+
 .inside-paragraph h1{
-    line-height: 01;
+    line-height: 1;
     text-align: right;
     /*margin: auto;*/
     margin-bottom: 50px;
@@ -157,8 +162,9 @@ a
 }
 
 .char-description{
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 350;
+    text-align: left;
 }
 
 #char-selection{
