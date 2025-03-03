@@ -142,7 +142,7 @@ a
 }
 
 .left-line-text{
-    border-left: 3px solid var(--web-beige);
+    border-left: 2px solid var(--web-beige);
     padding: 0 15px;
 }
 
