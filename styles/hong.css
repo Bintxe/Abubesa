@@ -97,8 +97,9 @@ a
 
     border-radius: 0;
     background-color: var(--web-red);
-    background-image: url(../img/awawa.png);
+    background-image: url(../img/fondo_pj.png);
     background-size: cover;
+    background-position-x: 50%;
 }
 
 .blur-filter{
