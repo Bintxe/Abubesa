@@ -70,7 +70,7 @@ function loadWebtoonImage(){
     //load scrolled img, 1 previous and 3 next
     for(let i = Math.max(scrolledImg - 1, 0); i< Math.min(scrolledImg + 3, webtoonImages.length); i++){
         
-        let desiredSrc = '../img/Hong/Webtoon/'+ language + '/Hong-Episodio1_' +  String(i+1).padStart(3,0) + '.png';
+        let desiredSrc = '../img/Hong/Webtoon/'+ language + '/Hong_' +  String(i+1).padStart(3,0) + '.png';
         if(webtoonImages[i].getAttribute("src") != desiredSrc){
             webtoonImages[i].src = desiredSrc;
             webtoonImages[i].removeAttribute("height");
