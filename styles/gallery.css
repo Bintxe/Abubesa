@@ -31,6 +31,7 @@ html{
 #gallery
 {
     position: relative;
+    width: 100%;
 }
 
 #gallery img
@@ -103,14 +104,26 @@ html{
     width: 100%;
     height: 100%;
 
-    z-index: 2;
+    z-index: 4;
 
     display: inline-flex;
     justify-content: space-between;
     align-items: center;    
 }
 
-#overlay-background{
+#gallery-overlay-mobile
+{
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 4;
+
+    display: none;
+}
+
+.overlay-background{
     background-color: var(--main-overlay-color);
     position: fixed;
     z-index: -1;
@@ -147,6 +160,15 @@ html{
     user-select: none;
 }
 
+#overlay-image-mobile
+{
+    max-height: 85vh;
+    max-width: 100vw;
+    align-self: center;
+
+    z-index: 2;
+}
+
 #overlay-image-text{
     background-color: var(--main-overlay-color-b);
     width: 100%;
@@ -159,10 +181,78 @@ html{
     transition: 0.3s ease;
 }
 
+#overlay-image-text-mobile{
+    color:var(--main-bg-color);
+
+    font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 150;
+    line-height: 0.75;
+    text-align: center;
+}
+
 #overlay-image-text p{
     color:var(--main-bg-color);
     font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.3em;
     font-weight: 150;
     line-height: 0.75;
+}
+
+.overlay-controls-mobile{
+    background-color: var(--main-overlay-color);
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+}
+
+.overlay-close-button{
+    position: absolute;
+    opacity: 0.3 !important;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.overlay-close-button:hover, .overlay-close-button:active{
+    opacity: 1;
+}
+
+/* Mobile screen */
+@media only screen and (max-width: 500px) {
+    .go-up-button{
+        display: none;
+    }
+
+    .gallery-arrow-button{
+        opacity: 1;
+
+        max-height: 65px;
+        max-width: 65px;
+
+        align-self: center;
+    }
+
+    .overlay-background{
+        z-index: 1;
+    }
+
+    #gallery-overlay-mobile{
+        display: inline-flex;
+    }
+
+    .overlay-image-box{
+        display: inline-flex;
+
+        height: 85%;
+        width: 100%;
+
+        justify-content: center;
+    }
+    
+
+    
 }

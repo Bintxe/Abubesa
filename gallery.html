@@ -44,8 +44,40 @@
         </div>
     </header>
 
+    <header id="navbar-mobile">
+        <div class="menu-logo">
+            <a href="./index.html">
+                <img class="logo" src="./img/logo1.png"/>
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleMobileMenu()">
+            <img src="./img/flecha.png"/>
+        </div>
+    </div>
+    </header>
+
+    <div id="menu-mobile-overlay-bg" class="hidden" onclick="toggleMobileMenu()"></div>
+    <div id="menu-mobile-overlay" class="hidden-top">
+        <!--  -->
+        <a href="./hong.html">
+            <div class="menu-mobile-row">
+                Hong
+            </div>
+        </a>
+        <a href="./gallery.html">
+            <div class="menu-mobile-row">
+                Artworks
+            </div>
+        </a>
+        <a href="./about.html">
+            <div class="menu-mobile-row">
+                About
+            </div>
+        </a>
+    </div>
+
     <div id="gallery-overlay" class="hidden">
-        <div id="overlay-background"></div>
+        <div class="overlay-background" onclick="hideImageOverlay(this);"></div>
         <div class="gallery-arrow-button" onclick="navigateImages(-1);" style="rotate:-90deg">
 
         </div>
@@ -68,6 +100,32 @@
         </div>
     </div>
 
+
+    <div id="gallery-overlay-mobile" class="hidden">
+        <div class="overlay-background"  onclick="hideImageOverlay(this);"></div>
+
+        <div class="gallery-arrow-button overlay-close-button" onclick="hideImageOverlay(this);" style="rotate:180deg"></div>
+
+        <div id="overlay-image-mobile-div" class="overlay-image-box pinch-zoom">
+            <img id="overlay-image-mobile" src="./img/Artworks/SFW/Thumbnails/Himeno.png" data-src="./img/Artworks/SFW/Thumbnails/Himeno.png" data-elem="pinchzoomer" />
+        </div>
+        <div class="overlay-controls-mobile">
+            <div class="gallery-arrow-button" onclick="navigateImages(-1);" style="rotate:-90deg"></div>
+            <div id="overlay-image-text-mobile">
+                <p id="overlay-text-title-mobile" style="font-weight: 350;">
+                    I've only ever imagined the gardens...
+                </p>
+                <p id="overlay-text-year-mobile">
+                    2022
+                </p>
+                <p id="overlay-text-extra-mobile">
+                    Commission
+                </p>
+            </div>
+            <div class="gallery-arrow-button" onclick="navigateImages(1);" style="rotate:90deg"></div>
+        </div>
+    </div>
+
     <!-- Begin of main section-->
     <div class="main-box">
         <div class="margin-box">
@@ -79,74 +137,73 @@
 
             <div id="gallery">
 
-            <img data-year="2024" alt="Aphrodite is ready for battle" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Aphrodite_2.png" />
-            <img data-year="2024" alt="Eris causing discord" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Eris_n_Melinoe_Soyjack.png" />
-            <img data-year="2024" alt="Hades 2 beach episode" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Eris_n_Melinoe_at_the_beach.png" />
-            <img data-year="2024" alt="Selene" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Selene.png" />
-            <img data-year="2024" alt="Marcille is too hungry" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Jackpot_Falin_n_Marcille.png" />
-            <img data-year="2024" alt="Yuri in the dashcon ball pit" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Marcille_n_Falin.png" />
-            <img data-year="2024" alt="Marcille & Falin at the convention" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Marcille_n_Falin_cosplay.png" />
-            <img data-year="2024" alt="Frieren has finally woken up" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Frieren_Fern_n_Stark.png" />
-            <img data-year="2024" alt="Nice t-shirt, Bocchi" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Bocchi.png" />
-            <img data-year="2024" alt="Kikuri #SHIBUYAMELTDOWN" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Kikuri_meltdown.png" />
-            <img data-year="2024" alt="Dehya & Candace" class="sfw commission hidden" src="./img/Artworks/SFW/Thumbnails/Dehya_n_Candace.png" />
-            <img data-year="2024" alt="Raiden Shotgun" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Raiden_n_Shotgun.png" />
-            <img data-year="2024" alt="Who let her cook?!" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Who_let_her_cook.png" />
-            <img data-year="2024" alt="Lumine & Wanderer 1" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Lumine_n_Wanderer_1.png" />
-            <img data-year="2024" alt="Lumine & Wanderer 2" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Lumine_n_Wanderer_2.png" />
-            <img data-year="2023" alt="Ganyu & Senhe" class="sfw commission hidden" src="./img/Artworks/SFW/Thumbnails/Ganyu_n_Senhe.png" />
-            <img data-year="2024" alt="Damn b*tch, you live like this?" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evelynn_pin_up_remake.png" />
-            <img data-year="2023" alt="Concert night 1" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evelynn_spit_remake_1.png" />
-            <img data-year="2023" alt="Concert night 2" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evelynn_spit_remake_2.png" />
-            <img data-year="2024" alt="me n who fr" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Guts_n_Sailor.png" />
-            <img data-year="2024" alt="Marcille" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Marcille.png" />
-            <img data-year="2024" alt="May" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/May.png" />
-            <img data-year="2023" alt="Bridget" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Bridget.png" />
-            <img data-year="2023" alt="Borgir" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Ramlethal_borgir.png" />
-            <img data-year="2023" alt="Ducktales" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Ducktales.png" />
-            <img data-year="2024" alt="Seo from The Exorcist Club" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Seo_pin_up.png" />
-            <img data-year="2024" alt="Yelan x Ningguang" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Yelan_n_Ningguang.png" />
-            <img data-year="2022" alt="Aphrodite" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Aphrodite_1.png" />
-            <img data-year="2022" alt="Enjoy your meal" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Enjoy_your_meal_Megaera_n_Zagreus.png" />
-            <img data-year="2022" alt="Megaera" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Megaera.png" />
-            <img data-year="2022" alt="Fuck the police" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Fuck_the_police_Caitlyn_n_Vi_1.png" />
-            <img data-year="2022" alt="Fuck the police (literally)" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Fuck_the_police_Caitlyn_n_Vi_2.png" />
-            <img data-year="2022" alt="Oil and water" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Oil_n_water_Caitlyn_n_Vi.png" />
-            <img data-year="2022" alt="Hot cupcakes" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Hot_cupcakes_Caitlyn_n_Vi.png" />
-            <img data-year="2022" alt="I've only ever imagined the gardens..." class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Ive_only_ever_imagined_the_gardens_Caitlyn_n_Vi.png" />
-            <img data-year="2021" alt="Jinx" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Jinx_loca.png" />
-            <img data-year="2022" alt="Toxic relationship" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Toxic_relationship_Ekko_n_Jinx.png" />
-            <img data-year="2022" alt="Timebomb 1" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Timebomb_Jinx_n_Ekko_1.png" />
-            <img data-year="2022" alt="Timebomb 2" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Timebomb_Jinx_n_Ekko_2.png" />
-            <img data-year="2022" alt="Timebomb 3" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Timebomb_Jinx_n_Ekko_3.png" />
-            <img data-year="2022" alt="Timebomb 4" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Timebomb_Jinx_n_Ekko_4.png" />
-            <img data-year="2022" alt="Jinx x Evelynn 1" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Jinx_n_Evelynn_1.png" />
-            <img data-year="2022" alt="Jinx x Evelynn 2" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Jinx_n_Evelynn_2.png" />
-            <img data-year="2022" alt="Filling the void" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Filling_the_void_Kaisa.png" />
-            <img data-year="2021" alt="Evelynn" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evelynn_pin_up.png" />
-            <img data-year="2021" alt="Jinx & Vi" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Jinx_n_Vi.png" />
-            <img data-year="2022" alt="Mara (OC)" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Mara_OC_Pin_up.png" />
-            <img data-year="2022" alt="Malenia" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Malenia.png" />            
-            <img data-year="2021" alt="Chainsaw Man" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Denji.png" />
-            <img data-year="2021" alt="Makima & Denji" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Makima_n_Denji.png" />
-            <img data-year="2022" alt="Himeno" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Himeno.png" />
-            <img data-year="2021" alt="Dance Dance Kobeni" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Dance_Dance_Kobeni.png" />
-            <img data-year="2021" alt="Lady Dimitrescu" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Lady_Dimitrescu.png" />
-            <img data-year="2022" alt="Baiken" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Baiken.png" />
-            <img data-year="2021" alt="Bayonetta" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Bayonetta.png" />
-            <img data-year="2021" alt="Deabru" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Deabru_2021.png" />
-            <img data-year="2021" alt="Eden - Characters design" class="sfw commission hidden" src="./img/Artworks/SFW/Thumbnails/EDEN_denak.png" />
-            <img data-year="2021" alt="Evangelion 3.33" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evangelion_333.png" />
+                <img data-year="2024" alt="Aphrodite is ready for battle" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Aphrodite_2.png" />
+                <img data-year="2024" alt="Eris causing discord" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Eris_n_Melinoe_Soyjack.png" />
+                <img data-year="2024" alt="Hades 2 beach episode" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Eris_n_Melinoe_at_the_beach.png" />
+                <img data-year="2024" alt="Selene" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Selene.png" />
+                <img data-year="2024" alt="Marcille is too hungry" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Jackpot_Falin_n_Marcille.png" />
+                <img data-year="2024" alt="Yuri in the dashcon ball pit" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Marcille_n_Falin.png" />
+                <img data-year="2024" alt="Marcille & Falin at the convention" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Marcille_n_Falin_cosplay.png" />
+                <img data-year="2024" alt="Frieren has finally woken up" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Frieren_Fern_n_Stark.png" />
+                <img data-year="2024" alt="Nice t-shirt, Bocchi" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Bocchi.png" />
+                <img data-year="2024" alt="Kikuri #SHIBUYAMELTDOWN" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Kikuri_meltdown.png" />
+                <img data-year="2024" alt="Dehya & Candace" class="sfw commission hidden" src="./img/Artworks/SFW/Thumbnails/Dehya_n_Candace.png" />
+                <img data-year="2024" alt="Raiden Shotgun" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Raiden_n_Shotgun.png" />
+                <img data-year="2024" alt="Who let her cook?!" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Who_let_her_cook.png" />
+                <img data-year="2024" alt="Lumine & Wanderer 1" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Lumine_n_Wanderer_1.png" />
+                <img data-year="2024" alt="Lumine & Wanderer 2" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Lumine_n_Wanderer_2.png" />
+                <img data-year="2023" alt="Ganyu & Senhe" class="sfw commission hidden" src="./img/Artworks/SFW/Thumbnails/Ganyu_n_Senhe.png" />
+                <img data-year="2024" alt="Damn b*tch, you live like this?" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evelynn_pin_up_remake.png" />
+                <img data-year="2023" alt="Concert night 1" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evelynn_spit_remake_1.png" />
+                <img data-year="2023" alt="Concert night 2" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evelynn_spit_remake_2.png" />
+                <img data-year="2024" alt="me n who fr" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Guts_n_Sailor.png" />
+                <img data-year="2024" alt="Marcille" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Marcille.png" />
+                <img data-year="2024" alt="May" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/May.png" />
+                <img data-year="2023" alt="Bridget" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Bridget.png" />
+                <img data-year="2023" alt="Borgir" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Ramlethal_borgir.png" />
+                <img data-year="2023" alt="Ducktales" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Ducktales.png" />
+                <img data-year="2024" alt="Seo from The Exorcist Club" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Seo_pin_up.png" />
+                <img data-year="2024" alt="Yelan x Ningguang" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Yelan_n_Ningguang.png" />
+                <img data-year="2022" alt="Aphrodite" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Aphrodite_1.png" />
+                <img data-year="2022" alt="Enjoy your meal" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Enjoy_your_meal_Megaera_n_Zagreus.png" />
+                <img data-year="2022" alt="Megaera" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Megaera.png" />
+                <img data-year="2022" alt="Fuck the police" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Fuck_the_police_Caitlyn_n_Vi_1.png" />
+                <img data-year="2022" alt="Fuck the police (literally)" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Fuck_the_police_Caitlyn_n_Vi_2.png" />
+                <img data-year="2022" alt="Oil and water" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Oil_n_water_Caitlyn_n_Vi.png" />
+                <img data-year="2022" alt="Hot cupcakes" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Hot_cupcakes_Caitlyn_n_Vi.png" />
+                <img data-year="2022" alt="I've only ever imagined the gardens..." class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Ive_only_ever_imagined_the_gardens_Caitlyn_n_Vi.png" />
+                <img data-year="2021" alt="Jinx" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Jinx_loca.png" />
+                <img data-year="2022" alt="Toxic relationship" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Toxic_relationship_Ekko_n_Jinx.png" />
+                <img data-year="2022" alt="Timebomb 1" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Timebomb_Jinx_n_Ekko_1.png" />
+                <img data-year="2022" alt="Timebomb 2" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Timebomb_Jinx_n_Ekko_2.png" />
+                <img data-year="2022" alt="Timebomb 3" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Timebomb_Jinx_n_Ekko_3.png" />
+                <img data-year="2022" alt="Timebomb 4" class="nsfw hidden" src="./img/Artworks/NSFW/Thumbnails/Timebomb_Jinx_n_Ekko_4.png" />
+                <img data-year="2022" alt="Jinx x Evelynn 1" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Jinx_n_Evelynn_1.png" />
+                <img data-year="2022" alt="Jinx x Evelynn 2" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Jinx_n_Evelynn_2.png" />
+                <img data-year="2022" alt="Filling the void" class="nsfw commission hidden" src="./img/Artworks/NSFW/Thumbnails/Filling_the_void_Kaisa.png" />
+                <img data-year="2021" alt="Evelynn" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evelynn_pin_up.png" />
+                <img data-year="2021" alt="Jinx & Vi" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Jinx_n_Vi.png" />
+                <img data-year="2022" alt="Mara (OC)" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Mara_OC_Pin_up.png" />
+                <img data-year="2022" alt="Malenia" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Malenia.png" />            
+                <img data-year="2021" alt="Chainsaw Man" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Denji.png" />
+                <img data-year="2021" alt="Makima & Denji" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Makima_n_Denji.png" />
+                <img data-year="2022" alt="Himeno" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Himeno.png" />
+                <img data-year="2021" alt="Dance Dance Kobeni" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Dance_Dance_Kobeni.png" />
+                <img data-year="2021" alt="Lady Dimitrescu" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Lady_Dimitrescu.png" />
+                <img data-year="2022" alt="Baiken" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Baiken.png" />
+                <img data-year="2021" alt="Bayonetta" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Bayonetta.png" />
+                <img data-year="2021" alt="Deabru" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Deabru_2021.png" />
+                <img data-year="2021" alt="Eden - Characters design" class="sfw commission hidden" src="./img/Artworks/SFW/Thumbnails/EDEN_denak.png" />
+                <img data-year="2021" alt="Evangelion 3.33" class="sfw hidden" src="./img/Artworks/SFW/Thumbnails/Evangelion_333.png" />
             </div>
             
         </div>
     </div>
 
     <a href="#">
-    <div class="go-up-button">
-        
-    </div>
-</a>
+        <div class="go-up-button">
+        </div>
+    </a>
 
     <!-- Begin of footer of page -->
     <footer>
@@ -171,4 +228,5 @@
 </body>
 <script src="js/main.js"></script>
 <script src="js/gallery.js"></script>
+<script src="js/third-party/pinch-zoom.js"></script>
 </html>

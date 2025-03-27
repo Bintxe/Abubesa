@@ -111,6 +111,6 @@ window.onload = (event) =>
     preloadImages();
     loadWebtoonImage();
 
-    window.addEventListener('scroll', () => {updateNavbarOnScroll()});
+    window.addEventListener('scroll', () => {updateNavbarOnScroll("navbar")});
     window.addEventListener('scroll', () => {loadWebtoonImage()});
 }
