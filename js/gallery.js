@@ -4,14 +4,7 @@ var body = document.getElementsByTagName("html")[0];
 var touchStartX = 0
 var touchEndX = 0
 
-//Functions
-function checkViewportSize(size)
-{
-    return body.clientWidth < size;
-}
-
-
-    
+//Functions    
 function checkSwipe() {
     //Only check if the mobile gallery overlay is enabled
     let overlay = document.getElementById("gallery-overlay-mobile");

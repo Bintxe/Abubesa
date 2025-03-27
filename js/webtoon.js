@@ -1,6 +1,6 @@
 //Global variables
 var language = "es";
-var totalImages = 77;
+var totalImages = 135;
 
 var gallery = document.getElementById("webtoon-box");
 var webtoonImages = gallery.children;
@@ -51,12 +51,20 @@ function OnImageError() {
 
 function preloadImages()
 {
+    let baseWidth = 800;
+    let baseHeight = 1280;
+
+    if(checkViewportSize(MOBILE_WIDTH))
+    {
+        let baseWidth = window.innerWidth;
+    }
+
     for(var i = 0; i < totalImages; i++)
     {
         let img = new Image();
         img.src = "../img/DummyImage.png";
-        img.width = 800;
-        img.height = 1280;
+        img.width = baseWidth;
+        img.height = baseHeight;
 
         gallery.appendChild(img);
     }

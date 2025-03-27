@@ -5,6 +5,11 @@ const MEDIUM_TABLET_WIDTH = 900;
 const LARGE_TABLET_WIDTH = 1200;
 
 //Functions
+function checkViewportSize(size)
+{
+    return window.innerWidth < size;
+}
+
 function updateNavbarOnScroll (id) {
     var currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos) 
