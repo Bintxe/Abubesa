@@ -8,7 +8,7 @@ body{
     color: var(--web-beige);
 }
 
-#navbar{
+#navbar-mobile, #navbar{
     background-color: var(--web-black);
 }
 
@@ -20,6 +20,11 @@ a
 #navbar a:hover
 {
     color: var(--web-beige);
+}
+
+.hidden-top
+{
+    top: -50% !important;
 }
 
 .main-box{
@@ -221,4 +226,24 @@ a
     opacity: 0;
     transform: translate(30%,16%) !important;
     transition: 0.1s;
+}
+
+/* Mobile screen */
+@media only screen and (max-width: 500px) {
+    .menu-mobile-row
+    {
+        color: var(--web-black);
+    }
+
+    .menu-mobile-row-b
+    {
+        background-color: var(--web-red);
+        padding: 1.5vh 4vh;
+    }
+
+    .menu-mobile-row-b:hover, .menu-mobile-row-b:active
+    {
+        color: var(--web-beige);
+    }
+
 }

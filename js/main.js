@@ -1,5 +1,6 @@
 //Global variables
 var prevScrollpos = window.scrollY;
+var prevMobileScrollpos = window.scrollY;
 const MOBILE_WIDTH = 500;
 const MEDIUM_TABLET_WIDTH = 900;
 const LARGE_TABLET_WIDTH = 1200;
@@ -20,6 +21,18 @@ function updateNavbarOnScroll (id) {
         document.getElementById(id).style.top = "-12vh";
     }
     prevScrollpos = currentScrollPos;
+}
+
+function updateMobileNavbarOnScroll (id) {
+    var currentMobileScrollPos = window.scrollY;
+    if (prevMobileScrollpos > currentMobileScrollPos) 
+    {
+        document.getElementById(id).style.top = "0";
+    } else if(currentMobileScrollPos > 300)
+    {
+        document.getElementById(id).style.top = "-12vh";
+    }
+    prevMobileScrollpos = currentMobileScrollPos;
 }
 
 function toggleMobileMenu(){
@@ -45,5 +58,5 @@ function toggleMobileMenu(){
 //Main execution cycle
 window.onload = (event) =>
 {
-    window.addEventListener('scroll', () => {updateNavbarOnScroll("navbar-mobile")});
+    window.addEventListener('scroll', () => {updateMobileNavbarOnScroll("navbar-mobile")});
 }

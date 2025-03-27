@@ -5,6 +5,9 @@ var totalImages = 135;
 var gallery = document.getElementById("webtoon-box");
 var webtoonImages = gallery.children;
 
+var baseWidth = 800;
+var baseHeight = 1280;
+
 /*
 var continueLoad = true;
 var endLoad = false;
@@ -51,12 +54,12 @@ function OnImageError() {
 
 function preloadImages()
 {
-    let baseWidth = 800;
-    let baseHeight = 1280;
+    
 
     if(checkViewportSize(MOBILE_WIDTH))
     {
-        let baseWidth = window.innerWidth;
+        baseWidth = window.innerWidth;
+        baseHeight = baseWidth * baseHeight / 800;
     }
 
     for(var i = 0; i < totalImages; i++)
@@ -73,7 +76,7 @@ function preloadImages()
 function loadWebtoonImage(){
     let currentScrollPos = window.scrollY;
 
-    let scrolledImg = Math.round(currentScrollPos / 1280);
+    let scrolledImg = Math.round(currentScrollPos / baseHeight);
 
     //load scrolled img, 1 previous and 3 next
     for(let i = Math.max(scrolledImg - 1, 0); i< Math.min(scrolledImg + 3, webtoonImages.length); i++){
@@ -120,5 +123,6 @@ window.onload = (event) =>
     loadWebtoonImage();
 
     window.addEventListener('scroll', () => {updateNavbarOnScroll("navbar")});
+    window.addEventListener('scroll', () => {updateMobileNavbarOnScroll("navbar-mobile")});
     window.addEventListener('scroll', () => {loadWebtoonImage()});
 }
