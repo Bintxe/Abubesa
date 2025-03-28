@@ -104,7 +104,8 @@
     <!-- Begin of main section-->
     <div class="main-box invisible">
         <div class="margin-box">
-            <div class="content-box" style="background-image: url(./img/Hong_Webcomic_Portada_2.png)">
+
+            <div class="content-box pc-only" style="background-image: url(./img/Hong_Webcomic_Portada_2.png)">
                 <div class="inside-text">
                     <div class="inside-paragraph">
                         <p>In a region in the heart of Africa, devastated by an endless war and forgotten by the world, a rebel group has taken control of the exploitation of coltan, making it their source of power and control.</p>
@@ -116,12 +117,26 @@
                     </div>
                 </div>
             </div>
+            <div class="content-box mobile-only" style="background-position: 0% 50%;"></div>
+            <div class="content-box mobile-only" style="background-image:none; background-color: var(--web-red);">
+                <div class="inside-text">
+                    <div class="inside-paragraph">
+                        <p>In a region in the heart of Africa, devastated by an endless war and forgotten by the world, a rebel group has taken control of the exploitation of coltan, making it their source of power and control.</p>
+                        <p>But where the population suffers from the tyranny of the warlords, Raven Hong takes justice with her most powerful weapon: her knuckles. Together with Brofound, an NGO that investigates the illegal coltan trade, Hong will try to prevent an imminent massacre.</p>
+                    </div>
+                    <div id="gallery-filters">
+                        <button onclick="location.href='./hong/webtoon.html'" type="button"><p>Read the prologue</p></button>
+                        <button class="hidden"><p>Read the comic</p></button>
+                    </div>
+                </div>
+            </div>
+
             <h1 style="margin:5rem 0 0 0;">Characters</h1>
         </div>
         <div id="character-box" data-character="">
             <div class="blur-filter">
                 <div class="margin-box">
-                    <div class="inside-text">
+                    <div class="inside-text pc-only">
                         <div class="inside-paragraph">
                             <div class="visible">
                                 <h1 style="text-transform: uppercase;"><span class="char-name"></span><br/><span class="char-surname"></span></h1>
@@ -143,15 +158,32 @@
                 </div>
             </div>
         </div>
+        
+        <div id="character-box-mobile" class="mobile-only">
+            <div class="margin-box">
+                <div class="inside-paragraph">
+                    <div class="visible">
+                        <h1 style="text-transform: uppercase;"><span class="char-name">Raven</span><br/><span class="char-surname">Hong</span></h1>
+                        <p><b>Age: </b><span class="char-age">56</span></p>
+                        <p><b>Origin: </b><span class="char-nationality">Unknown</span></p>
+                        <div class="left-line-text">
+                            <div class="char-description">
+                                <p>Everyone around Lake Kivu knows who the forest hermit is, but no one really knows her.</p><p>A martial arts master and survival expert, Raven Hong will take on any guerrilla or army single-handedly to defend her people no matter how ruthless and cruel they may be.</p><p>Memories of her past make her realize daily that she was not so different from the people she fights against.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="margin-box">
             <div id="char-selection">
                 <div class="mobile-span"></div>
-                <button class="selected" onclick="selectCharacter(this);" data-character="Hong" style="background-image: url(./img/Hong/Characters/Hong.png);"></button>
-                <button class="" onclick="selectCharacter(this);" data-character="Magambo" style="background-image: url(./img/Hong/Characters/Magambo.png);"></button>
-                <button class="" onclick="selectCharacter(this);" data-character="Ebba" style="background-image: url(./img/Hong/Characters/Ebba.png);"></button>
-                <button class="" onclick="selectCharacter(this);" data-character="Thulani" style="background-image: url(./img/Hong/Characters/Thulani.png);"></button>
-                <button class="" onclick="selectCharacter(this);" data-character="Ash" style="background-image: url(./img/Hong/Characters/Ash.png);"></button>
-                <button class="" onclick="selectCharacter(this);" data-character="Viktor" style="background-image: url(./img/Hong/Characters/Viktor.png);"></button>
+                <button class="selected" onclick="selectCharacter('Hong');" data-character="Hong" style="background-image: url(./img/Hong/Characters/Hong.png);"></button>
+                <button class="" onclick="selectCharacter('Magambo');" data-character="Magambo" style="background-image: url(./img/Hong/Characters/Magambo.png);"></button>
+                <button class="" onclick="selectCharacter('Ebba');" data-character="Ebba" style="background-image: url(./img/Hong/Characters/Ebba.png);"></button>
+                <button class="" onclick="selectCharacter('Thulani');" data-character="Thulani" style="background-image: url(./img/Hong/Characters/Thulani.png);"></button>
+                <button class="" onclick="selectCharacter('Ash');" data-character="Ash" style="background-image: url(./img/Hong/Characters/Ash.png);"></button>
+                <button class="" onclick="selectCharacter('Viktor');" data-character="Viktor" style="background-image: url(./img/Hong/Characters/Viktor.png);"></button>
                 <div class="mobile-span"></div>
             </div>
         </div>

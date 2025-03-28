@@ -1,35 +1,29 @@
 //Global variables
 var descHong = ["Raven", "Hong", "56", "Unknown","<p>Everyone around Lake Kivu knows who the forest hermit is, but no one really knows her.</p><p>A martial arts master and survival expert, Raven Hong will take on any guerrilla or army single-handedly to defend her people no matter how ruthless and cruel they may be.</p><p>Memories of her past make her realize daily that she was not so different from the people she fights against.</p>"];
 var descMagambo = ["Paul", "Magambo", "51", "Rwanda", "<p>Equal parts political leader, businessman and warlord, he heads the Movement for the Defense of the People, a rebel military group based in eastern Democratic Republic of Congo.</p><p>Thanks to the movement, Magambo controls important deposits of rare earths from which he has made his fortune.</p>"];
-var descEbba = ["Ebba", "Brouwer", "66", "Netherlands","<p>Director of the Brouwer Foundation (BroFound), an NGO assigned in the Democratic Republic of Congo with the mission of denouncing human rights violations.</p><p>Her altruistic sensitivity leads her to help those most in need, although she can be deluded and overconfident.</p>"];
-var descThulani = ["Samuel", "Thulani", "62", "South Africa","<p>As a retired military officer from the South African Army, Thulani operates as a security advisor for BroFound and Ebba's right-hand man.</p><p>His long career in the military has given him a great knowledge of warfare, which has made him highly cautious and suspicious.</p>"];
-var descAsh = ["Ashleen Murphy", '"Ash"', "27", "Ireland","<p>Ash is a security guard hired by BroFound and her goal is to get its members home in one piece.</p><p>True, she served briefly in her country's military and has no real combat experience, but she is proactive and a team player according to her resume.</p>"];
-var descViktor = ["Viktor", "Sokolov", "25", "Russia","<p>Tired of writing articles about “simple avocado recipes for divorcees” for an online newspaper, Viktor set out to travel to Africa and try his hand at gonzo journalism.</p><p>He accompanies the BroFound team to write a report on the illegal coltan trade.</p><p>His cocky personality and his fondness for tobacco give him away as a journalist.</p>"];
+var descEbba = ["Ebba", "Brouwer", "66", "Netherlands","<p>Director of the Brouwer Foundation (Brofound), an NGO assigned in the Democratic Republic of Congo with the mission of denouncing human rights violations.</p><p>Her altruistic sensitivity leads her to help those most in need, although she can be deluded and overconfident.</p>"];
+var descThulani = ["Samuel", "Thulani", "62", "South Africa","<p>As a retired military officer from the South African Army, Thulani operates as a security advisor for Brofound and Ebba's right-hand man.</p><p>His long career in the military has given him a great knowledge of warfare, which has made him highly cautious and suspicious.</p>"];
+var descAsh = ["Ashleen Murphy", '"Ash"', "27", "Ireland","<p>Ash is a security guard hired by Brofound and her job is to get its members home in one piece.</p><p>True, she may have only served briefly in her country's military and has no actual combat experience, but she is proactive and a team player according to her resume.</p>"];
+var descViktor = ["Viktor", "Sokolov", "25", "Russia","<p>Tired of writing articles about “simple avocado recipes for divorcees” for an online newspaper, Viktor set out to travel to Africa and try his hand at gonzo journalism.</p><p>He accompanies the Brofound team to write a report on the illegal coltan trade.</p><p>His cocky personality and his fondness for tobacco give him away as a journalist.</p>"];
 
 //Preload images
 
 
 //Functions
-function selectCharacter(button){
+function selectCharacter(character){
     let characterBox = document.getElementById("character-box");
 
-    //Return if the button of the currently displayed character is pressed
-    if(characterBox.dataset.character == button.dataset.character)
-    {
-        return;
-    }
-
-    let charContent = characterBox.getElementsByClassName("inside-paragraph")[0];
+    let charContent;
     let charImage = characterBox.querySelector( '.main-image:not(.invisible)');
 
-    /*
-    let charTitle = document.createElement("h1");
-    charTitle.innerHTML = button.dataset.character;*/
 
-    charContent.classList.add("invisible");
-    if(charImage) charImage.classList.add("invisible");
-
-    characterBox.dataset.character = button.dataset.character;
+    //Check if we are in mobile or desktop
+    if(checkViewportSize(MOBILE_WIDTH)){
+        charContent = document.getElementById("character-box-mobile");
+        
+    }else{
+        charContent = characterBox.getElementsByClassName("inside-paragraph")[0];
+    }
 
     let charName = charContent.getElementsByClassName("char-name")[0];
     let charSurame = charContent.getElementsByClassName("char-surname")[0];
@@ -38,13 +32,28 @@ function selectCharacter(button){
     let charDesc = charContent.getElementsByClassName("char-description")[0];
 
     /*
+    let charTitle = document.createElement("h1");
+    charTitle.innerHTML = button.dataset.character;*/
+
+    //Return if the button of the currently displayed character is pressed
+    if(characterBox.dataset.character != character)
+    {
+    
+        charContent.classList.add("invisible");
+        if(charImage) charImage.classList.add("invisible");
+
+        characterBox.dataset.character = character;
+
+        
+    }
+    /*
     charImage.onload = function(){
         charContent.classList.remove("invisible");
         charImage.classList.remove("invisible");
     }*/
 
     this.setTimeout(function(){
-        switch(button.dataset.character){
+        switch(character){
             case "Hong":
                 charName.innerHTML = descHong[0];
                 charSurame.innerHTML = descHong[1];
@@ -110,7 +119,7 @@ function selectCharacter(button){
     let buttons = document.getElementById("char-selection").children;
     for(let i=0; i<buttons.length; i++)
     {
-        if(buttons[i] != button){
+        if(buttons[i].dataset.character != character){
             buttons[i].classList.remove("selected");
         }else if(!buttons[i].classList.contains("selected")){
             buttons[i].classList.add("selected");
@@ -125,5 +134,11 @@ window.onload = (event) =>
 {
     document.getElementsByClassName("main-box")[0].classList.remove("invisible");
 
-    selectCharacter(document.getElementById("char-selection").children[1]);
+    window.addEventListener('scroll', () => {updateMobileNavbarOnScroll("navbar-mobile")});
+
+    selectCharacter(document.getElementById("char-selection").children[1].dataset.character);
+
+    window.addEventListener('resize', function(event) {
+        selectCharacter(document.getElementById("character-box").dataset.character);
+    }, true);
 }

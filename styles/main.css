@@ -30,8 +30,6 @@ a
     transition: 0.2s;
 }
 
-
-
 .hidden{
     display: none !important;
 }
@@ -40,6 +38,11 @@ a
 {
     top: -30% !important;
     transition: 0.5s ease-in-out;
+}
+
+
+.mobile-only{
+    display: none !important;
 }
 
 #navbar{
@@ -388,12 +391,20 @@ footer{
 /* Mobile screen */
 @media only screen and (max-width: 500px) {
 
+    .mobile-only{
+        display: block !important;
+    }
+
+    .pc-only{
+        display: none !important;
+    }
+
     #navbar{
-        display: none;
+        display: none !important;
     }
 
     #navbar-mobile{
-        display: block;
+        display: block !important;
     }
 
     .menu-logo{
