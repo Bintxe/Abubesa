@@ -264,6 +264,8 @@ window.onload = (event) =>
         checkSwipe();
     })
 
+    window.addEventListener('scroll', () => {updateMobileNavbarOnScroll("navbar-mobile")});
+
 
     filterGallery(null, 'nsfw');
     filterGallery(null, 'sfw');

@@ -125,5 +125,5 @@ window.onload = (event) =>
 {
     document.getElementsByClassName("main-box")[0].classList.remove("invisible");
 
-    selectCharacter(document.getElementById("char-selection").children[0]);
+    selectCharacter(document.getElementById("char-selection").children[1]);
 }

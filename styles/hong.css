@@ -187,7 +187,7 @@ a
 }
 
 #char-selection button{
-    margin: 0 1vw;
+    margin: 5px 1vw;
     width: 8vw;
     height: 12vw;
     min-width: 120px;
@@ -228,6 +228,34 @@ a
     transition: 0.1s;
 }
 
+.mobile-span{
+    display: hidden;
+    min-width: 30px;
+    height: 100px;
+}
+
+/* Tablet screen */
+@media only screen and (max-width: 900px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .inside-text{
+        font-size: 1rem;
+    }
+
+    #char-selection{
+        justify-content: initial;
+        overflow-x: scroll;
+        mask-image: linear-gradient(to left, transparent 0%, #fff 10% 90%, transparent 100%);
+        min-height: 200px;
+    }
+
+    .mobile-span{
+        display: block;
+    }
+}
+
 /* Mobile screen */
 @media only screen and (max-width: 500px) {
     .menu-mobile-row
@@ -245,5 +273,10 @@ a
     {
         color: var(--web-beige);
     }
+
+    .inside-text{
+        font-size: 0.8rem;
+    }
+
 
 }

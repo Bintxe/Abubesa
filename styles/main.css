@@ -464,4 +464,29 @@ footer{
     #gallery-filters button p{
         margin: 7px auto;
     }
+
+    /* About page */
+    #about-box{
+        width: 90%;
+        display: block;
+        padding: 0 5%;
+        text-align: center;
+    }
+    
+    #about-box img{
+        max-width: 70%;
+        height: fit-content;
+        align-self: center;
+        border-radius: 50%;
+    }
+    
+    #about-box h1{
+        margin-top: 20px;
+    }
+    
+    #about-box .inside-text{
+        font-weight: 350;
+        font-size: 1rem;
+        text-align: left;
+    }
 }
