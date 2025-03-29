@@ -5,6 +5,10 @@ const MOBILE_WIDTH = 500;
 const MEDIUM_TABLET_WIDTH = 900;
 const LARGE_TABLET_WIDTH = 1200;
 
+const COOKIE_LANGUAGE = "language";
+const COOKIE_HONG_SCROLLPOS = "hong_scrollpos";
+const COOKIE_HONG_PAGE = "hong_page";
+
 //Functions
 function checkViewportSize(size)
 {
@@ -51,6 +55,30 @@ function toggleMobileMenu(){
         document.getElementsByTagName("html")[0].style.overflow = "auto";
     }
     
+}
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
 }
 
 

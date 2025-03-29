@@ -85,10 +85,10 @@ function loadWebtoonImage(){
         if(webtoonImages[i].getAttribute("src") != desiredSrc){
             webtoonImages[i].src = desiredSrc;
             webtoonImages[i].removeAttribute("height");
-        }
-        
+        }        
     }
-    
+
+    setCookie(COOKIE_HONG_SCROLLPOS, currentScrollPos, 365);
 }
 
 function changeLanguage(btn){
@@ -100,16 +100,24 @@ function changeLanguage(btn){
         case "es":
         case "en":
             language = sel;
-            let allFlags = document.getElementsByClassName("menu-flag");
-            for(let i=0; i<allFlags.length; i++){
-                if(allFlags[i].dataset.language != sel){
-                    allFlags[i].classList.add("greyed");
-                }        
-            }
-            btn.classList.remove("greyed");
-
+            updateLanguageButton(sel);
             loadWebtoonImage();
             break;
+    }
+
+    setCookie(COOKIE_LANGUAGE, language, 365);
+}
+
+function updateLanguageButton(lan)
+{
+    let allFlags = document.getElementsByClassName("menu-flag");
+    for(let i=0; i<allFlags.length; i++){
+        if(allFlags[i].dataset.language != lan){
+            allFlags[i].classList.add("greyed");
+        }else
+        {
+            allFlags[i].classList.remove("greyed");
+        }     
     }
 }
 
@@ -120,6 +128,20 @@ function changeLanguage(btn){
 window.onload = (event) =>
 {
     preloadImages();
+
+    let cookieLanguage = getCookie(COOKIE_LANGUAGE);
+    if(cookieLanguage !== "")
+    {
+        language = cookieLanguage;
+        updateLanguageButton(language);
+    }
+
+    let cookieScroll = getCookie(COOKIE_HONG_SCROLLPOS);
+    if(cookieScroll > 0)
+    {
+        window.scrollTo(0, cookieScroll);
+    }
+
     loadWebtoonImage();
 
     window.addEventListener('scroll', () => {updateNavbarOnScroll("navbar")});
