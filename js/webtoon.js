@@ -114,9 +114,11 @@ function updateLanguageButton(lan)
     for(let i=0; i<allFlags.length; i++){
         if(allFlags[i].dataset.language != lan){
             allFlags[i].classList.add("greyed");
+            console.log("Disable button: "+allFlags[i].dataset.language);
         }else
         {
             allFlags[i].classList.remove("greyed");
+            console.log("Enable button: "+allFlags[i].dataset.language);
         }     
     }
 }
@@ -129,16 +131,19 @@ window.onload = (event) =>
 {
     preloadImages();
 
+    console.log("default language is "+ language+". Trying to get language cookie")
     let cookieLanguage = getCookie(COOKIE_LANGUAGE);
     if(cookieLanguage !== "")
     {
         language = cookieLanguage;
+        console.log("Language cookie found: "+language);
         updateLanguageButton(language);
     }
 
     let cookieScroll = getCookie(COOKIE_HONG_SCROLLPOS);
     if(cookieScroll > 0)
     {
+        console.log("Scroll cookie found: "+cookieScroll);
         window.scrollTo(0, cookieScroll);
     }
 
