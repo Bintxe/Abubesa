@@ -1,5 +1,5 @@
 //Global variables
-var language = "es";
+var language = "en";
 var totalImages = 134;
 
 var gallery = document.getElementById("webtoon-box");

@@ -196,7 +196,7 @@ function hideImageOverlay(element)
 {
     let overlay = element.parentNode;
 
-    console.log(overlay)
+    //console.log(overlay)
     document.getElementsByTagName("html")[0].style.overflow = "auto";
     overlay.classList.add("hidden"); 
     document.removeEventListener("keydown", checkArrowKeys);
