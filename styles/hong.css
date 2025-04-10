@@ -193,6 +193,9 @@ a
     min-width: 120px;
     min-height: 120px;
 
+    max-width: 175px;
+    max-height: 175px;
+
     overflow: clip;
     border-radius: 15px;
     border: 4px outset var(--web-red);
