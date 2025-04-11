@@ -321,6 +321,7 @@ a
 
     .inside-paragraph h1{
         margin-bottom: 20px;
+        text-shadow: 1px 1px black;
     }
 
     .char-name{

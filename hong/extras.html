@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
-    <title>Hong - Fanart</title>
+    <title>Hong - Extras</title>
 </head>
 
 <body>
@@ -56,15 +56,59 @@
                     <a href="comic.html">Read</a>
                 </div>
                 <div class="menu-item" >
-                    <a href="fanart.html">Fanart</a>
+                    <a href="extras.html">Extras</a>
                 </div>
                 <div class="menu-span" ></div>
             </div>
         </div>
     </header>
 
+    <header id="navbar-mobile">
+        <div class="menu-logo">
+            <a href="../index.html">
+                <img class="logo" src="../img/logo2.png"/>
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleMobileMenu()">
+            <img src="../img/flecha.png"/>
+        </div>
+    </div>
+    </header>
+
+    <div id="menu-mobile-overlay-bg" class="hidden" onclick="toggleMobileMenu()"></div>
+    <div id="menu-mobile-overlay" class="hidden-top">
+        <!--  -->
+        
+        <div class="menu-mobile-row">
+            Hong
+        </div>
+        <a href="../hong.html">
+            <div class="menu-mobile-row menu-mobile-row-b">
+                Plot
+            </div>
+        </a><a href="./webtoon.html">
+            <div class="menu-mobile-row menu-mobile-row-b">Prologue</div>
+        </a>
+        <a href="./hong/comic.html" class="hidden">
+            <div class="menu-mobile-row menu-mobile-row-b">Read</div>
+        </a>
+        <a href="../hong/extras.html">
+            <div class="menu-mobile-row menu-mobile-row-b">Extras</div>
+        </a>
+        <a href="../gallery.html">
+            <div class="menu-mobile-row">
+                Artworks
+            </div>
+        </a>
+        <a href="../about.html">
+            <div class="menu-mobile-row">
+                About
+            </div>
+        </a>
+    </div>
+
     <div id="gallery-overlay" class="hidden">
-        <div id="overlay-background"></div>
+        <div class="overlay-background" onclick="hideImageOverlay(this);"></div>
         <div class="gallery-arrow-button" onclick="navigateImages(-1);" style="rotate:-90deg">
 
         </div>
@@ -81,9 +125,34 @@
             <img id="overlay-image" src="../img/Fanarts/Atari.JPEG" />
         </div>
         <div class="gallery-arrow-button" onclick="navigateImages(1);" style="rotate:90deg">
-
         </div>
     </div>
+
+    <div id="gallery-overlay-mobile" class="hidden">
+        <div class="overlay-background"  onclick="hideImageOverlay(this);"></div>
+
+        <div class="gallery-arrow-button overlay-close-button" onclick="hideImageOverlay(this);" style="rotate:180deg"></div>
+
+        <div id="overlay-image-mobile-div" class="overlay-image-box pinch-zoom">
+            <img id="overlay-image-mobile" src="../img/Fanarts/Atari.JPEG" />
+        </div>
+        <div class="overlay-controls-mobile">
+            <div class="gallery-arrow-button" onclick="navigateImages(-1);" style="rotate:-90deg"></div>
+            <div id="overlay-image-text-mobile">
+                <p id="overlay-text-title-mobile" style="font-weight: 350;">
+                    I've only ever imagined the gardens...
+                </p>
+                <p id="overlay-text-year-mobile">
+                    2022
+                </p>
+                <p id="overlay-text-extra-mobile">
+                    Commission
+                </p>
+            </div>
+            <div class="gallery-arrow-button" onclick="navigateImages(1);" style="rotate:90deg"></div>
+        </div>
+    </div>
+
 
     <!-- Begin of main section-->
     <div class="main-box">

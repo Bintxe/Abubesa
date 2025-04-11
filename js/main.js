@@ -9,6 +9,8 @@ const COOKIE_LANGUAGE = "language";
 const COOKIE_HONG_SCROLLPOS = "hong_scrollpos";
 const COOKIE_HONG_PAGE = "hong_page";
 
+console.log("prevMobileScrollpos: "+prevMobileScrollpos)
+
 //Functions
 function checkViewportSize(size)
 {
@@ -29,10 +31,11 @@ function updateNavbarOnScroll (id) {
 
 function updateMobileNavbarOnScroll (id) {
     var currentMobileScrollPos = window.scrollY;
+    console.log("currentMobileScrollPos: "+currentMobileScrollPos)
     if (prevMobileScrollpos > currentMobileScrollPos) 
     {
         document.getElementById(id).style.top = "0";
-    } else if(currentMobileScrollPos > 300)
+    } else if(prevMobileScrollpos < currentMobileScrollPos && currentMobileScrollPos > 300)
     {
         document.getElementById(id).style.top = "-12vh";
     }
