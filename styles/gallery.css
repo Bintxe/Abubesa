@@ -179,6 +179,7 @@ html{
     opacity: 0;
 
     transition: 0.3s ease;
+    pointer-events: none;
 }
 
 #overlay-image-text-mobile{
