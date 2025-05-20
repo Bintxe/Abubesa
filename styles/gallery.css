@@ -211,6 +211,7 @@ html{
 }
 
 .overlay-close-button{
+    background-image: url(../img/equis.png);
     position: absolute;
     opacity: 0.3 !important;
     top: 10px;
