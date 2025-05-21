@@ -98,8 +98,8 @@ a
 
 
 .menu-logo{
-    min-width: 250px;
-    width: 250px;
+    min-width: 300px;
+    width: 300px;
 }
 
 .menu-icon{
@@ -246,6 +246,15 @@ a
     align-content: end;
 }
 
+.zoom-box{
+    transition: 0.25s;
+}
+
+.zoom-box:hover{
+    scale: 1.02;
+    transition: 0.25s;
+}
+
 .split-box{
     width: 49%;
     display: inline-block;
@@ -260,14 +269,26 @@ a
     float: right;
 }
 
+#welcome-box{
+    height: 100%;
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+#welcome-box p{
+    padding: 0 15%;
+    font-size: 1.25rem;
+}
+
 .content-box img{
     /*align-self: baseline;*/
     vertical-align: bottom;
     text-align: right;
-    max-width: 40%;
+    max-width: 75%;
     right:0px;
     position: relative;
-    padding: 0 1% 1% 0;
+    padding: 7% 0% 2% 0;
 }
 
 .content-title{
