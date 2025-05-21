@@ -453,6 +453,18 @@ footer{
         margin-bottom: 1.5vh;
     }
 
+    #welcome-box{
+        width: 60%;
+    }
+
+    #welcome-box p{
+        font-size: 1rem;;
+    }
+
+    #welcome-box img{
+        max-width: 90%;
+    }
+
 
     .table-box{
         display: unset;
