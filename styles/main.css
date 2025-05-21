@@ -246,6 +246,20 @@ a
     align-content: end;
 }
 
+
+#intro-box{
+    width: 50%;
+    padding: 4vh 25% 6vh 25%;
+
+    text-align: center;
+    font-size: 1.25rem;;
+}
+
+#intro-box img{
+    width: 50%;
+    margin: 1vh 0;
+}
+
 .zoom-box{
     transition: 0.25s;
 }
@@ -409,6 +423,24 @@ footer{
     background-color:  var(--web-yw);
 }
 
+/* Tablet screen */
+@media only screen and (max-width: 1200px) {
+    #intro-box{
+        font-size: 1rem;
+    }
+    
+    #intro-box img{
+        width: 70%;
+    }
+}
+
+/* Small tablet screen */
+@media only screen and (max-width: 900px) {
+    #intro-box img{
+        width: 90%;
+    }
+}
+
 
 /* Mobile screen */
 @media only screen and (max-width: 500px) {
@@ -451,6 +483,15 @@ footer{
 
     .content-box{
         margin-bottom: 1.5vh;
+    }
+    
+    #intro-box{
+        width: 80%;
+        padding: 4vh 10% 6vh 10%;
+    }
+    
+    #intro-box img{
+        width: 100%;
     }
 
     #welcome-box{
