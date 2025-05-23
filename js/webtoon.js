@@ -8,49 +8,6 @@ var webtoonImages = gallery.children;
 var baseWidth = 800;
 var baseHeight = 1280;
 
-/*
-var continueLoad = true;
-var endLoad = false;
-
-var img;
-var galleryIndex = 1;
-*/
-
-//Functions
-/*
-function LoadWebtoonImage() {
-    
-    if (endLoad) {
-        clearInterval(myInterval);
-        return;
-    }
-
-    if (continueLoad) {
-
-        continueLoad = false;
-
-        if(galleryIndex <= webtoonImages.length){
-            img = webtoonImages[galleryIndex-1];
-        }else{
-            img = new Image();
-        }
-        img.onload = OnImageExists;
-        img.onerror = OnImageError;
-        img.src = '../img/Hong/Webtoon/'+ language + '/Hong-Episodio1_' +  String(galleryIndex).padStart(3,0) + '.png';
-    }
-
-}
-
-function OnImageExists() {
-    gallery.appendChild(img);
-    galleryIndex++;
-    continueLoad = true;
-}
-
-function OnImageError() {
-    endLoad = true;
-}
-*/
 
 function preloadImages()
 {
@@ -123,8 +80,6 @@ function updateLanguageButton(lan)
 
 
 //Main execution cycle
-/*let myInterval = setInterval(() => {LoadWebtoonImage(myInterval);}, 1);*/
-
 window.onload = (event) =>
 {
     preloadImages();

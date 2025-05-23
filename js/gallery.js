@@ -184,8 +184,6 @@ function sortImages(){
 
 
         columns[index] += imageList[i].getBoundingClientRect().height + window.innerWidth * 0.01;
-        
-        //console.log(imageList[i].src+": "+imageList[i].getBoundingClientRect().height + " + "+window.innerWidth * 0.01);
     }
 
     gallery.style.height = Math.max.apply(null, columns)+"px";
@@ -217,22 +215,7 @@ window.onload = (event) =>
         imageList[i].addEventListener('click', function(){onGalleryImageClick(img);});
     }
 
-    let overlay = document.getElementById("gallery-overlay");
-    /*
-    let overlayBgs = document.getElementsByClassName("overlay-background");
-
-    for(let i = 0; i < overlayBgs.length; i++)
-    {
-        let overlayBg = overlayBgs[i];
-
-        overlayBg.addEventListener('click', function(){ 
-            document.getElementsByTagName("html")[0].style.overflow = "auto";
-            overlay.classList.add("hidden"); 
-            document.removeEventListener("keydown", checkArrowKeys);
-        });
-    }*/
-
-    
+    let overlay = document.getElementById("gallery-overlay");    
 
     let overlayImg = overlay.getElementsByClassName("overlay-image-box")[0];
     overlayImg.addEventListener('mouseover', function(){
@@ -249,12 +232,6 @@ window.onload = (event) =>
         this.setTimeout(sortImages, 750);
     }, true);
 
-    /*
-    originalImgList = gallery.cloneNode(true);
-
-
-    desiredImageOrder = [...originalImgList.children];
-    */
     document.addEventListener('touchstart', e => {
         touchStartX = e.changedTouches[0].screenX;
     })
@@ -266,15 +243,8 @@ window.onload = (event) =>
 
     window.addEventListener('scroll', () => {updateMobileNavbarOnScroll("navbar-mobile")});
 
-
     filterGallery(null, 'nsfw');
     filterGallery(null, 'sfw');
     
     this.setTimeout(sortImages, 1000);
-
-    
-    //let el = document.querySelector('#overlay-image-mobile-div');
-
-    //var pzoom = pinchZoom(el);
-
 }

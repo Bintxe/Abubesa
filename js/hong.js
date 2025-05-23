@@ -31,9 +31,6 @@ function selectCharacter(character){
     let charNation = charContent.getElementsByClassName("char-nationality")[0];
     let charDesc = charContent.getElementsByClassName("char-description")[0];
 
-    /*
-    let charTitle = document.createElement("h1");
-    charTitle.innerHTML = button.dataset.character;*/
 
     //Return if the button of the currently displayed character is pressed
     if(characterBox.dataset.character != character)
@@ -46,11 +43,6 @@ function selectCharacter(character){
 
         
     }
-    /*
-    charImage.onload = function(){
-        charContent.classList.remove("invisible");
-        charImage.classList.remove("invisible");
-    }*/
 
     this.setTimeout(function(){
         switch(character){
@@ -111,9 +103,6 @@ function selectCharacter(character){
         }
 
         charContent.classList.remove("invisible");
-        //charImage.classList.remove("invisible");
-    
-        //charContent.insertBefore(charTitle, charDescription.firstChild);
     }, 200);
 
     let buttons = document.getElementById("char-selection").children;

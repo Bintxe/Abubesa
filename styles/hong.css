@@ -24,16 +24,12 @@ a
 
 .hidden-top
 {
-    top: -55% !important;
+    top: -60% !important;
 }
 
-.main-box{
-    /*background-color: var(--web-black);*/
-
+.main-box
+{
     background-color: transparent;
-
-    
-    /*background-blend-mode: multiply;*/
     
     padding-top: 11vh;
 
@@ -117,8 +113,6 @@ a
 {
     height: 100%;
     padding: 0 1.5vw;
-    
-    /*overflow: clip;*/
 
     display: flex;
     justify-content: center;
@@ -134,7 +128,6 @@ a
     padding: 0;
     width: 33%;
     min-width: 500px;
-    /*margin-left: -10%;*/
 
     position: relative;
     left: -16%;
@@ -144,8 +137,6 @@ a
 }
 
 #character-box .main-image{
-    /*scale: 2.2;
-    transform: translate(0%,16%);*/
     max-height: 100%;
     transition: 0.15s;
 
@@ -161,7 +152,7 @@ a
 .inside-paragraph h1{
     line-height: 1;
     text-align: right;
-    /*margin: auto;*/
+
     margin-bottom: 50px;
 }
 
@@ -201,9 +192,8 @@ a
     border: 4px outset var(--web-red);
     cursor: pointer;
 
-    /*background-image: url("../img/Hong/Characters/Hong.png");*/
     background-size: 100%;
-    /*background-position: 100% 30%;*/
+
     filter:grayscale(100%);
     background-color: var(--web-beige);
     transition: 0.25s;
@@ -303,10 +293,7 @@ a
         margin-top: 5%;
     }
 
-    #character-box-mobile{
-        /*background-color: var(--web-black);*/
-        /*transform: translateY(-115px);*/
-        
+    #character-box-mobile{        
         position: relative;
         /*height: 250px;*/
     }
@@ -352,8 +339,6 @@ a
     }
 
     #character-box .main-image{
-        /*scale: 2;*/
-        /*transform: translate(-12.5%,16%);*/
         left: unset;
     }
 
