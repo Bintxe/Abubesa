@@ -67,10 +67,8 @@ function changeLanguage(btn){
 
 function updateLanguageButton(lan)
 {
-    let allFlags = document.getElementsByClassName("menu-flag");console.log("language cookie is "+lan);
+    let allFlags = document.getElementsByClassName("menu-flag");
     for(let i=0; i<allFlags.length; i++){
-        
-        console.log("checking "+allFlags[i].dataset.language);
         if(allFlags[i].dataset.language != lan){
             allFlags[i].classList.add("greyed");
         }else
